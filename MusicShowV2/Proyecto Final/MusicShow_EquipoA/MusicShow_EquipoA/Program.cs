@@ -16,7 +16,8 @@ namespace MusicShow_EquipoA
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new CrearPerfilDeUsuario());
+            //Application.Run(new CrearPerfilDeUsuario());
+            Application.Run(new PaginaInicio());
         }
     }
 }

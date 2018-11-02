@@ -14,8 +14,12 @@ namespace MusicShow_EquipoA
 {
     public partial class MenuAnunciante : MetroForm
     {
+        String nombreAn;
+        String tipo;
         public MenuAnunciante()
         {
+            nombreAn = "";
+            tipo = "";
             InitializeComponent();
         }
 
@@ -23,5 +27,13 @@ namespace MusicShow_EquipoA
         {
 
         }
+
+        public void setInformacion(String name, String type) {
+            nombreAn = name;
+            tipo = type;
+            ML_Nombre.Text = nombreAn;
+            ML_TIPO.Text = tipo;
+        }
+
     }
 }

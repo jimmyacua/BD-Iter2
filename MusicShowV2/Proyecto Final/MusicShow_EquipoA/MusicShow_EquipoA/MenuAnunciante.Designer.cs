@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
+            this.ML_Nombre = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
-            this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
+            this.ML_TIPO = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
@@ -53,14 +53,14 @@
             this.metroLabel1.TabIndex = 12;
             this.metroLabel1.Text = "Nombre del anunciante";
             // 
-            // metroLabel2
+            // ML_Nombre
             // 
-            this.metroLabel2.AutoSize = true;
-            this.metroLabel2.Location = new System.Drawing.Point(208, 80);
-            this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(80, 19);
-            this.metroLabel2.TabIndex = 13;
-            this.metroLabel2.Text = "MODIFICAR";
+            this.ML_Nombre.AutoSize = true;
+            this.ML_Nombre.Location = new System.Drawing.Point(208, 80);
+            this.ML_Nombre.Name = "ML_Nombre";
+            this.ML_Nombre.Size = new System.Drawing.Size(80, 19);
+            this.ML_Nombre.TabIndex = 13;
+            this.ML_Nombre.Text = "MODIFICAR";
             // 
             // metroLabel3
             // 
@@ -71,14 +71,14 @@
             this.metroLabel3.TabIndex = 14;
             this.metroLabel3.Text = "Tipo de anunciante";
             // 
-            // metroLabel4
+            // ML_TIPO
             // 
-            this.metroLabel4.AutoSize = true;
-            this.metroLabel4.Location = new System.Drawing.Point(208, 111);
-            this.metroLabel4.Name = "metroLabel4";
-            this.metroLabel4.Size = new System.Drawing.Size(80, 19);
-            this.metroLabel4.TabIndex = 15;
-            this.metroLabel4.Text = "MODIFICAR";
+            this.ML_TIPO.AutoSize = true;
+            this.ML_TIPO.Location = new System.Drawing.Point(208, 111);
+            this.ML_TIPO.Name = "ML_TIPO";
+            this.ML_TIPO.Size = new System.Drawing.Size(80, 19);
+            this.ML_TIPO.TabIndex = 15;
+            this.ML_TIPO.Text = "MODIFICAR";
             // 
             // metroLink1
             // 
@@ -165,9 +165,9 @@
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.metroLabel4);
+            this.Controls.Add(this.ML_TIPO);
             this.Controls.Add(this.metroLabel3);
-            this.Controls.Add(this.metroLabel2);
+            this.Controls.Add(this.ML_Nombre);
             this.Controls.Add(this.metroLabel1);
             this.Name = "MenuAnunciante";
             this.Text = "¿Qué desea hacer?";
@@ -182,9 +182,9 @@
         #endregion
 
         private MetroFramework.Controls.MetroLabel metroLabel1;
-        private MetroFramework.Controls.MetroLabel metroLabel2;
+        private MetroFramework.Controls.MetroLabel ML_Nombre;
         private MetroFramework.Controls.MetroLabel metroLabel3;
-        private MetroFramework.Controls.MetroLabel metroLabel4;
+        private MetroFramework.Controls.MetroLabel ML_TIPO;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLink metroLink3;

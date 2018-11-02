@@ -66,7 +66,20 @@ namespace MusicShow_EquipoA
             }
 
             name = TX_Nombre.Text;
-            user.AgregarAnunciante(name, tipoAn);
+            int error = user.AgregarAnunciante(name, tipoAn);
+            if (error != 0)
+            {
+                MessageBox.Show("Ya existe un usuario asociado a este nombre en el sistema", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else {
+                MenuAnunciante menu = new MenuAnunciante();
+                menu.setInformacion(name, tipoAn);
+                menu.Show();
+                Hide();
+               
+            }
         }
+
+
     }
 }

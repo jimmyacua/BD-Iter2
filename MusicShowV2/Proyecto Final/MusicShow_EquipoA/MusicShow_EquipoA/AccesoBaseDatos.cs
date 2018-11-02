@@ -37,6 +37,7 @@ namespace Lab_Interfaces
             sqlConnection.Open();
 
             SqlDataReader datos = null;
+            //datos.
             SqlCommand comando = null;
 
             try

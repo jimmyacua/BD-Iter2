@@ -22,8 +22,17 @@ namespace MusicShow_EquipoA
         }
 
         public int AgregarAnunciante(string nombre, string tipo){
-            String insertar = "exec agregarAnunciante @Name = '" + nombre + "' , @Type = '" + tipo + "';"; 
+            String insertar = "exec agregarAnunciante @nombre = '" + nombre + "' , @tipo = '" + tipo + "';"; 
             return bd.ActualizarDatos(insertar);
+        }
+
+        public int VerificarUsuario(String nombre) {
+            String consulta = "exec consultarAnuncianteNombre @nombre = '" + nombre + "';";
+            SqlDataReader con = bd.EjecutarConsulta(consulta);
+            if (con.Read()) { //arreglar esto
+                return 1;
+            }
+            return 0;
         }
 
 
