@@ -312,6 +312,7 @@ namespace Lab_Interfaces
             }
         }
 
+<<<<<<< HEAD
         public DataTable FiltrarCancionesAnunciante(String nombre)
         {
             using (SqlConnection con = new SqlConnection(conexion))
@@ -344,6 +345,42 @@ namespace Lab_Interfaces
 
 
 
+=======
+
+        public int EliminarCancion(string nombre)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("ElimEst", con)) //cambiar por consulta
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+                        return error;
+                    }
+                    catch (SqlException ex)
+                    {
+
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+
+        }
+>>>>>>> 7e6339311f3ab8a07284ef26da57efe176f6e478
 
     }
 }

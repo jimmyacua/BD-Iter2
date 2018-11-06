@@ -14,10 +14,10 @@ namespace MusicShow_EquipoA
 {
     public partial class ModificarRepertorio : MetroForm
     {
-        MenuAnunciante menu;
-        public ModificarRepertorio(MenuAnunciante m)
+        ModificarConciertos mc;
+        public ModificarRepertorio(ModificarConciertos m)
         {
-            menu = m;
+            mc = m;
             InitializeComponent();
         }
 
@@ -33,7 +33,7 @@ namespace MusicShow_EquipoA
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-            menu.Show();
+            mc.Show();
             this.Hide();
            
         }

@@ -69,6 +69,7 @@ namespace MusicShow_EquipoA
 
             DataTable tabla;
 
+<<<<<<< HEAD
             tabla = bd.FiltrarCancionesAnunciante(filtro);
 
             // Se inicializa el source para cargar el datagridview y se le asigna el dataTable obtenido
@@ -90,12 +91,17 @@ namespace MusicShow_EquipoA
 
 
 
+=======
+>>>>>>> 7e6339311f3ab8a07284ef26da57efe176f6e478
         private void Form1_Load(object sender, EventArgs e)
         {
             LlenarCombobox(comboBoxIdioma, "select * from Idioma");
             LlenarCombobox(comboBoxGenero, "select * from Genero");
+<<<<<<< HEAD
             LlenarTabla(gridCanciones, menu.nombreAn);
 
+=======
+>>>>>>> 7e6339311f3ab8a07284ef26da57efe176f6e478
 
         }
 
@@ -124,11 +130,16 @@ namespace MusicShow_EquipoA
 
             AccesoBaseDatos bd = new AccesoBaseDatos();
 
+<<<<<<< HEAD
 
             bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interprete +"';");
             bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+";");
             //bd.ActualizarDatos();
 
+=======
+            bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interprete +"';");
+            bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+";");
+>>>>>>> 7e6339311f3ab8a07284ef26da57efe176f6e478
 
         }
 

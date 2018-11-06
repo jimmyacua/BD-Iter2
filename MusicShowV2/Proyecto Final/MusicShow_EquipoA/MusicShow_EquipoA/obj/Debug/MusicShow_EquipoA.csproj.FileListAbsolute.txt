@@ -70,6 +70,7 @@ C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\Mu
 C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
 C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
 C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
+<<<<<<< HEAD
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojResolveAssemblyReference.cache
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
@@ -94,3 +95,5 @@ E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\Musi
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
 E:\ProyectoBasesIter2\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+=======
+>>>>>>> 7e6339311f3ab8a07284ef26da57efe176f6e478

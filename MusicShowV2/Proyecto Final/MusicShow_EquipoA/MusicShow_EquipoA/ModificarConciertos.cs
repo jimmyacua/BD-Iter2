@@ -31,5 +31,12 @@ namespace MusicShow_EquipoA
             menu.Show();
             this.Hide();
         }
+
+        private void metroLink3_Click(object sender, EventArgs e)
+        {
+            ModificarRepertorio m = new ModificarRepertorio(this);
+            m.Show();
+            this.Hide();
+        }
     }
 }

@@ -135,6 +135,7 @@
             this.metroLink3.TabIndex = 28;
             this.metroLink3.Text = "Modificar repertorio";
             this.metroLink3.UseSelectable = true;
+            this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
             // 
             // metroComboBox3
             // 

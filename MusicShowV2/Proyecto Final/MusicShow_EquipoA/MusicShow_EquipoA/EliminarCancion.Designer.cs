@@ -31,7 +31,6 @@
             this.button1 = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
             this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
             this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
@@ -39,10 +38,11 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
-            this.metroComboBox2 = new MetroFramework.Controls.MetroComboBox();
+            this.modCancionCombo = new MetroFramework.Controls.MetroComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.elCancionCombo = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -55,11 +55,12 @@
             this.button1.TabIndex = 18;
             this.button1.Text = "Eliminar";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.metroLabel5);
-            this.groupBox1.Controls.Add(this.metroComboBox1);
+            this.groupBox1.Controls.Add(this.elCancionCombo);
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Location = new System.Drawing.Point(377, 174);
             this.groupBox1.Name = "groupBox1";
@@ -76,16 +77,6 @@
             this.metroLabel5.Size = new System.Drawing.Size(132, 19);
             this.metroLabel5.TabIndex = 21;
             this.metroLabel5.Text = "Seleccione la canción";
-            // 
-            // metroComboBox1
-            // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(18, 73);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(324, 29);
-            this.metroComboBox1.TabIndex = 9;
-            this.metroComboBox1.UseSelectable = true;
             // 
             // metroTextBox1
             // 
@@ -198,7 +189,7 @@
             // groupBox2
             // 
             this.groupBox2.Controls.Add(this.metroLabel4);
-            this.groupBox2.Controls.Add(this.metroComboBox2);
+            this.groupBox2.Controls.Add(this.modCancionCombo);
             this.groupBox2.Controls.Add(this.button2);
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Controls.Add(this.metroLabel2);
@@ -223,15 +214,15 @@
             this.metroLabel4.Text = "Seleccione la canción";
             this.metroLabel4.Click += new System.EventHandler(this.metroLabel4_Click);
             // 
-            // metroComboBox2
+            // modCancionCombo
             // 
-            this.metroComboBox2.FormattingEnabled = true;
-            this.metroComboBox2.ItemHeight = 23;
-            this.metroComboBox2.Location = new System.Drawing.Point(194, 43);
-            this.metroComboBox2.Name = "metroComboBox2";
-            this.metroComboBox2.Size = new System.Drawing.Size(121, 29);
-            this.metroComboBox2.TabIndex = 19;
-            this.metroComboBox2.UseSelectable = true;
+            this.modCancionCombo.FormattingEnabled = true;
+            this.modCancionCombo.ItemHeight = 23;
+            this.modCancionCombo.Location = new System.Drawing.Point(194, 43);
+            this.modCancionCombo.Name = "modCancionCombo";
+            this.modCancionCombo.Size = new System.Drawing.Size(121, 29);
+            this.modCancionCombo.TabIndex = 19;
+            this.modCancionCombo.UseSelectable = true;
             // 
             // button2
             // 
@@ -260,6 +251,18 @@
             this.metroLink1.TabIndex = 19;
             this.metroLink1.Text = "Volver";
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // elCancionCombo
+            // 
+            this.elCancionCombo.FormattingEnabled = true;
+            this.elCancionCombo.ItemHeight = 23;
+            this.elCancionCombo.Location = new System.Drawing.Point(18, 73);
+            this.elCancionCombo.Name = "elCancionCombo";
+            this.elCancionCombo.Size = new System.Drawing.Size(324, 29);
+            this.elCancionCombo.TabIndex = 9;
+            this.elCancionCombo.UseSelectable = true;
+            this.elCancionCombo.SelectedIndexChanged += new System.EventHandler(this.elCancionCombo_SelectedIndexChanged);
             // 
             // EliminarCancion
             // 
@@ -284,18 +287,18 @@
 
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox1;
         private MetroFramework.Controls.MetroTextBox metroTextBox3;
         private MetroFramework.Controls.MetroTextBox metroTextBox2;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.GroupBox groupBox2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox2;
+        private MetroFramework.Controls.MetroComboBox modCancionCombo;
         private System.Windows.Forms.Button button2;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroComboBox elCancionCombo;
     }
 }
