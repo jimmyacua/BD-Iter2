@@ -105,6 +105,36 @@ namespace MusicShow_EquipoA
             return tabla;
         }
 
+
+        public DataTable obtenerConcierto(string filtroNombre, string filtroGeneral)
+        {
+            DataTable tabla = null;
+            try
+            {
+                //Si los filtros son nulos se cargan todos los estudiantes de la base de datos
+                if (filtroGeneral == null && filtroNombre == null)
+                {
+                    tabla = bd.FiltrarPorNombre("", "");
+                }
+                else if (filtroGeneral == null && filtroNombre != null)
+                {
+                    tabla = bd.FiltrarPorNombre(filtroNombre, "");
+                }
+                else if (filtroNombre == null && filtroGeneral != null)
+                {
+                    tabla = bd.FiltrarPorNombre("", filtroGeneral);
+                }
+                else if (filtroGeneral != null && filtroNombre != null)
+                {
+                    tabla = bd.FiltrarPorNombre(filtroNombre, filtroGeneral);
+                }
+            }
+            catch (SqlException ex)
+            {
+            }
+            return tabla;
+        }
+
     }
 
 }
