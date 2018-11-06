@@ -19,7 +19,9 @@ namespace MusicShow_EquipoA
         MenuAnunciante menu;
         string nombre;
         string interprete;
-        string año;
+        int año;
+        string idioma;
+        string genero;
         Usuario user;
 
 
@@ -31,15 +33,13 @@ namespace MusicShow_EquipoA
         }
 
 
-        private void LlenarCombobox(ComboBox combobox)
+        private void LlenarCombobox(ComboBox combobox, string consulta)
         {
 
             AccesoBaseDatos bd;
             bd = new AccesoBaseDatos();
 
-            string consulta = "";
-
-            SqlDataReader datos = bd.ObtenerTabla();
+            SqlDataReader datos = bd.ObtenerTabla(consulta);
  
             if (datos != null)
             {
@@ -60,15 +60,10 @@ namespace MusicShow_EquipoA
 
 
 
-
-
-
-
-
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
+            LlenarCombobox(comboBoxIdioma, "select * from Idioma");
+            LlenarCombobox(comboBoxGenero, "select * from Genero");
 
         }
 
@@ -91,11 +86,14 @@ namespace MusicShow_EquipoA
         {
             nombre = nombreCancionBox.Text;
             interprete = interpreteCancionBox.Text;
-            año = añoCancionBox.Text;
+            año = int.Parse(añoCancionBox.Text);
+            idioma = comboBoxIdioma.Text;
+            genero = comboBoxGenero.Text;
 
             AccesoBaseDatos bd = new AccesoBaseDatos();
 
-            bd.ActualizarDatos();
+            bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interprete +"';");
+            bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+";");
 
         }
 
