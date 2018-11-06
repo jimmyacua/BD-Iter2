@@ -14,7 +14,7 @@ namespace MusicShow_EquipoA
 {
     public partial class MenuAnunciante : MetroForm
     {
-        String nombreAn;
+        public String nombreAn;
         String tipo;
         public MenuAnunciante()
         {

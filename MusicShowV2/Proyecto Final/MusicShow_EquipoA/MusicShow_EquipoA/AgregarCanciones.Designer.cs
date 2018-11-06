@@ -174,6 +174,7 @@
             this.gridCanciones.Name = "gridCanciones";
             this.gridCanciones.Size = new System.Drawing.Size(465, 298);
             this.gridCanciones.TabIndex = 8;
+            this.gridCanciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridCanciones_CellContentClick);
             // 
             // groupBox1
             // 

@@ -19,7 +19,9 @@ namespace MusicShow_EquipoA
         MenuAnunciante menu;
         string nombre;
         string interprete;
-        string año;
+        int año;
+        string idioma;
+        string genero;
         Usuario user;
 
 
@@ -31,15 +33,13 @@ namespace MusicShow_EquipoA
         }
 
 
-        private void LlenarCombobox(ComboBox combobox)
+        private void LlenarCombobox(ComboBox combobox, string consulta)
         {
 
             AccesoBaseDatos bd;
             bd = new AccesoBaseDatos();
 
-            string consulta = "";
-
-            SqlDataReader datos = bd.ObtenerTabla();
+            SqlDataReader datos = bd.ObtenerTabla(consulta);
  
             if (datos != null)
             {
@@ -57,18 +57,45 @@ namespace MusicShow_EquipoA
             combobox.SelectedIndex = 0;
         }
 
+        private void LlenarTabla(DataGridView dataGridView, string filtro)
+        {
+            /* Obtiene un dataTable con todos los estudiantes que se encuentran
+            en la base de datos (null, null) es para vengan todas las tuplas sin
+            ningún filtro*/
+
+            AccesoBaseDatos bd;
+            bd = new AccesoBaseDatos();
+
+
+            DataTable tabla;
+
+            tabla = bd.FiltrarCancionesAnunciante(filtro);
+
+            // Se inicializa el source para cargar el datagridview y se le asigna el dataTable obtenido
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+            // Ciclo para darle un ancho a cada columna del datagridview proporcionado
 
 
 
 
 
-
-
+            for (int i = 0; i < dataGridView.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
 
 
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            LlenarCombobox(comboBoxIdioma, "select * from Idioma");
+            LlenarCombobox(comboBoxGenero, "select * from Genero");
+            LlenarTabla(gridCanciones, menu.nombreAn);
+
 
         }
 
@@ -91,11 +118,17 @@ namespace MusicShow_EquipoA
         {
             nombre = nombreCancionBox.Text;
             interprete = interpreteCancionBox.Text;
-            año = añoCancionBox.Text;
+            año = int.Parse(añoCancionBox.Text);
+            idioma = comboBoxIdioma.Text;
+            genero = comboBoxGenero.Text;
 
             AccesoBaseDatos bd = new AccesoBaseDatos();
 
-            bd.ActualizarDatos();
+
+            bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interprete +"';");
+            bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+";");
+            //bd.ActualizarDatos();
+
 
         }
 
@@ -111,6 +144,11 @@ namespace MusicShow_EquipoA
         }
 
         private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gridCanciones_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }

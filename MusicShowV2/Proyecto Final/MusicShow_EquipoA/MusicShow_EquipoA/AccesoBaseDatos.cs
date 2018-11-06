@@ -273,5 +273,77 @@ namespace Lab_Interfaces
 
         }
 
+
+        public DataTable FiltrarPorNombre(String nombre, String filtroTexto)
+        {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del
+                procedimiento almacenado,
+                * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("SELECT * from dbo.filtrarConciertos(@nombre, @filtroTexto)", con))
+                {
+                    try
+                    {
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        SqlParameter paramNombre = new SqlParameter("@nombre",
+                        SqlDbType.VarChar);
+                        paramNombre.Value = nombre;
+                        paramNombre.Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(paramNombre);
+                        SqlParameter paramTexto = new
+                        SqlParameter("@filtroTexto", SqlDbType.VarChar);
+                        paramTexto.Value = filtroTexto;
+                        paramTexto.Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(paramTexto);
+                        /*Se abre la conexión*/
+                        con.Open();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                    catch (SqlException ex)
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
+        public DataTable FiltrarCancionesAnunciante(String nombre)
+        {
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                using (SqlCommand cmd = new SqlCommand("SELECT * from dbo.filtrarConciertos(@nombre, @filtroTexto)", con))
+                {
+                    try
+                    {
+                        SqlParameter paramNombre = new SqlParameter("@nombre",
+                        SqlDbType.VarChar);
+                        paramNombre.Value = nombre;
+                        paramNombre.Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(paramNombre);
+                        con.Open();
+                        SqlDataAdapter da = new SqlDataAdapter(cmd);
+                        DataTable dt = new DataTable();
+                        da.Fill(dt);
+                        return dt;
+                    }
+                    catch (SqlException ex)
+                    {
+                        return null;
+                    }
+                }
+            }
+        }
+
+
+
+
+
+
+
     }
 }
