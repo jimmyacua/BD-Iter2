@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using Lab_Interfaces;
+using System.Data.SqlClient;
 
 namespace MusicShow_EquipoA
 {
@@ -25,7 +27,8 @@ namespace MusicShow_EquipoA
 
         private void ConsultaCoonciertos_Load(object sender, EventArgs e)
         {
-
+            this.LlenarCombobox(concCombobox);
+            this.LlenarTabla(dataGridView1, null, null);
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
@@ -37,6 +40,29 @@ namespace MusicShow_EquipoA
         {
             menu.Show();
             this.Hide();
+        }
+
+        private void LlenarCombobox(ComboBox combobox) {
+            AccesoBaseDatos bd;
+            bd = new AccesoBaseDatos();
+            SqlDataReader datos = bd.ObtenerTabla("exec consultarConciertos");
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            /* Si no hay tuplas en la base de datos se limpia el combobox y se
+            carga unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            // Se pone por defecto la primera entrada del combobox seleccionada
+            combobox.SelectedIndex = 0;
         }
 
 
@@ -58,5 +84,21 @@ namespace MusicShow_EquipoA
             }
         }
 
+        private void concCombobox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (concCombobox.SelectedIndex == 0)
+            {
+                LlenarTabla(dataGridView1, null, null);
+            }
+            else
+            {
+                LlenarTabla(dataGridView1, concCombobox.Text, null);
+            }
+        }
+
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            LlenarTabla(dataGridView1, null, filtroGeneral.Text);
+        }
     }
 }

@@ -9,18 +9,61 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using Lab_Interfaces;
+using System.Data.SqlClient;
 
 namespace MusicShow_EquipoA
 {
     public partial class AgregarCanciones : MetroForm
     {
         MenuAnunciante menu;
+        string nombre;
+        string interprete;
+        string año;
+        Usuario user;
+
 
         public AgregarCanciones(MenuAnunciante m)
         {
             menu = m;
             InitializeComponent();
+            user = new Usuario();
         }
+
+
+        private void LlenarCombobox(ComboBox combobox, string consulta)
+        {
+
+            AccesoBaseDatos bd;
+            bd = new AccesoBaseDatos();
+
+            SqlDataReader datos = bd.ObtenerTabla(consulta);
+ 
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            combobox.SelectedIndex = 0;
+        }
+
+
+
+
+
+
+
+
+
+
 
         private void Form1_Load(object sender, EventArgs e)
         {
@@ -44,6 +87,13 @@ namespace MusicShow_EquipoA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            nombre = nombreCancionBox.Text;
+            interprete = interpreteCancionBox.Text;
+            año = añoCancionBox.Text;
+
+            AccesoBaseDatos bd = new AccesoBaseDatos();
+
+            //bd.ActualizarDatos();
 
         }
 
@@ -51,6 +101,16 @@ namespace MusicShow_EquipoA
         {
             menu.Show();
             this.Hide();
+        }
+
+        private void metroTextBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void metroLabel4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

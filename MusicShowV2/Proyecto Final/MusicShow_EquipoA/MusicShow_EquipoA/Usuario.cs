@@ -26,6 +26,14 @@ namespace MusicShow_EquipoA
             return bd.ActualizarDatos(insertar);
         }
 
+
+
+
+
+
+
+
+
         public int VerificarUsuario(String nombre) {
             String consulta = "exec consultarAnuncianteNombre @nombreUsuario = '" + nombre + "';";
             SqlDataReader con = bd.EjecutarConsulta(consulta);

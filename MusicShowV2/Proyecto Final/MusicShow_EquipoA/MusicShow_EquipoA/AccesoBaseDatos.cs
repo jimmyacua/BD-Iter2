@@ -108,6 +108,24 @@ namespace Lab_Interfaces
             return error;
         }
 
+        public SqlDataReader ObtenerTabla(string consulta)
+        {
+            SqlDataReader datos = null;
+            try
+            {
+                datos = EjecutarConsulta(consulta);
+            }
+            catch (SqlException ex)
+            {
+            }
+            return datos;
+        }
+
+
+
+
+
+
         /// <summary>
         /// Método para llamar al procedimiento almacenado de eliminarEstudiante 
         /// </summary>
