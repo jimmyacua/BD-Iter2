@@ -32,7 +32,7 @@
             this.ML_Nombre = new MetroFramework.Controls.MetroLabel();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.ML_TIPO = new MetroFramework.Controls.MetroLabel();
-            this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.linkAgregarCanciones = new MetroFramework.Controls.MetroLink();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
             this.metroLink4 = new MetroFramework.Controls.MetroLink();
@@ -80,14 +80,15 @@
             this.ML_TIPO.TabIndex = 15;
             this.ML_TIPO.Text = "MODIFICAR";
             // 
-            // metroLink1
+            // linkAgregarCanciones
             // 
-            this.metroLink1.Location = new System.Drawing.Point(127, 40);
-            this.metroLink1.Name = "metroLink1";
-            this.metroLink1.Size = new System.Drawing.Size(75, 23);
-            this.metroLink1.TabIndex = 16;
-            this.metroLink1.Text = "Agregar";
-            this.metroLink1.UseSelectable = true;
+            this.linkAgregarCanciones.Location = new System.Drawing.Point(127, 40);
+            this.linkAgregarCanciones.Name = "linkAgregarCanciones";
+            this.linkAgregarCanciones.Size = new System.Drawing.Size(75, 23);
+            this.linkAgregarCanciones.TabIndex = 16;
+            this.linkAgregarCanciones.Text = "Agregar";
+            this.linkAgregarCanciones.UseSelectable = true;
+            this.linkAgregarCanciones.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // metroLink2
             // 
@@ -97,6 +98,7 @@
             this.metroLink2.TabIndex = 17;
             this.metroLink2.Text = "Modificar";
             this.metroLink2.UseSelectable = true;
+            this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
             // 
             // metroLink3
             // 
@@ -106,6 +108,7 @@
             this.metroLink3.TabIndex = 18;
             this.metroLink3.Text = "Agregar";
             this.metroLink3.UseSelectable = true;
+            this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
             // 
             // metroLink4
             // 
@@ -115,10 +118,11 @@
             this.metroLink4.TabIndex = 19;
             this.metroLink4.Text = "Modificar o eliminar";
             this.metroLink4.UseSelectable = true;
+            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.metroLink1);
+            this.groupBox1.Controls.Add(this.linkAgregarCanciones);
             this.groupBox1.Controls.Add(this.metroLink2);
             this.groupBox1.Location = new System.Drawing.Point(38, 181);
             this.groupBox1.Name = "groupBox1";
@@ -147,6 +151,7 @@
             this.metroLink5.TabIndex = 20;
             this.metroLink5.Text = "Consultar concierto";
             this.metroLink5.UseSelectable = true;
+            this.metroLink5.Click += new System.EventHandler(this.metroLink5_Click);
             // 
             // metroButton1
             // 
@@ -156,6 +161,7 @@
             this.metroButton1.TabIndex = 22;
             this.metroButton1.Text = "Cerrar sesión";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // MenuAnunciante
             // 
@@ -185,7 +191,7 @@
         private MetroFramework.Controls.MetroLabel ML_Nombre;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel ML_TIPO;
-        private MetroFramework.Controls.MetroLink metroLink1;
+        private MetroFramework.Controls.MetroLink linkAgregarCanciones;
         private MetroFramework.Controls.MetroLink metroLink2;
         private MetroFramework.Controls.MetroLink metroLink3;
         private MetroFramework.Controls.MetroLink metroLink4;

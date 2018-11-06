@@ -198,6 +198,7 @@
             this.metroLink1.TabIndex = 11;
             this.metroLink1.Text = "Volver";
             this.metroLink1.UseSelectable = true;
+            this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // AgregarCanciones
             // 

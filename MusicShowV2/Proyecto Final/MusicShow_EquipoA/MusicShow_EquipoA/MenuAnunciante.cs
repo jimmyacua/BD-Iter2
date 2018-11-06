@@ -23,6 +23,7 @@ namespace MusicShow_EquipoA
             InitializeComponent();
         }
 
+
         private void Menu_Load(object sender, EventArgs e)
         {
 
@@ -35,5 +36,46 @@ namespace MusicShow_EquipoA
             ML_TIPO.Text = tipo;
         }
 
+        private void metroButton1_Click(object sender, EventArgs e)
+        {
+            PaginaInicio pi = new PaginaInicio();
+            pi.Show();
+            this.Hide();
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            AgregarCanciones ac = new AgregarCanciones(this);
+            ac.Show();
+            this.Hide();
+        }
+
+        private void metroLink2_Click(object sender, EventArgs e)
+        {
+            ModificarRepertorio mr = new ModificarRepertorio(this);
+            mr.Show();
+            this.Hide();
+        }
+
+        private void metroLink3_Click(object sender, EventArgs e)
+        {
+            AnunciarConcierto ac = new AnunciarConcierto(this);
+            ac.Show();
+            this.Hide();
+        }
+
+        private void metroLink4_Click(object sender, EventArgs e)
+        {
+            ModificarConciertos mc = new ModificarConciertos(this);
+            mc.Show();
+            this.Hide();
+        }
+
+        private void metroLink5_Click(object sender, EventArgs e)
+        {
+            ConsultaConciertos cc = new ConsultaConciertos(this);
+            cc.Show();
+            this.Hide();
+        }
     }
 }

@@ -14,8 +14,11 @@ namespace MusicShow_EquipoA
 {
     public partial class AgregarCanciones : MetroForm
     {
-        public AgregarCanciones()
+        MenuAnunciante menu;
+
+        public AgregarCanciones(MenuAnunciante m)
         {
+            menu = m;
             InitializeComponent();
         }
 
@@ -42,6 +45,12 @@ namespace MusicShow_EquipoA
         private void button1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
         }
     }
 }

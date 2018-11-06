@@ -12,8 +12,10 @@ namespace MusicShow_EquipoA
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
+
         static void Main()
         {
+            string nomnbre;
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new CrearPerfilDeUsuario());

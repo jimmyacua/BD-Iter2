@@ -14,8 +14,10 @@ namespace MusicShow_EquipoA
 {
     public partial class ModificarRepertorio : MetroForm
     {
-        public ModificarRepertorio()
+        MenuAnunciante menu;
+        public ModificarRepertorio(MenuAnunciante m)
         {
+            menu = m;
             InitializeComponent();
         }
 
@@ -27,6 +29,13 @@ namespace MusicShow_EquipoA
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
+           
         }
     }
 }

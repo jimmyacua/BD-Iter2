@@ -14,14 +14,22 @@ namespace MusicShow_EquipoA
 {
     public partial class ModificarConciertos : MetroForm
     {
-        public ModificarConciertos()
+        MenuAnunciante menu;
+        public ModificarConciertos(MenuAnunciante m)
         {
+            menu = m;
             InitializeComponent();
         }
 
         private void ModificarConciertos_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void metroLink1_Click(object sender, EventArgs e)
+        {
+            menu.Show();
+            this.Hide();
         }
     }
 }
