@@ -28,24 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.concCombobox = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.filtroGeneral = new MetroFramework.Controls.MetroTextBox();
             this.metroButton1 = new MetroFramework.Controls.MetroButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // metroComboBox1
+            // concCombobox
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(189, 124);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(176, 29);
-            this.metroComboBox1.TabIndex = 0;
-            this.metroComboBox1.UseSelectable = true;
+            this.concCombobox.FormattingEnabled = true;
+            this.concCombobox.ItemHeight = 23;
+            this.concCombobox.Location = new System.Drawing.Point(189, 124);
+            this.concCombobox.Name = "concCombobox";
+            this.concCombobox.Size = new System.Drawing.Size(176, 29);
+            this.concCombobox.TabIndex = 0;
+            this.concCombobox.UseSelectable = true;
+            this.concCombobox.SelectedIndexChanged += new System.EventHandler(this.concCombobox_SelectedIndexChanged);
             // 
             // metroLabel1
             // 
@@ -74,36 +75,36 @@
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
-            // metroTextBox1
+            // filtroGeneral
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(145, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(486, 124);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(167, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.metroTextBox1.Click += new System.EventHandler(this.metroTextBox1_Click);
+            this.filtroGeneral.CustomButton.Image = null;
+            this.filtroGeneral.CustomButton.Location = new System.Drawing.Point(145, 1);
+            this.filtroGeneral.CustomButton.Name = "";
+            this.filtroGeneral.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.filtroGeneral.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.filtroGeneral.CustomButton.TabIndex = 1;
+            this.filtroGeneral.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.filtroGeneral.CustomButton.UseSelectable = true;
+            this.filtroGeneral.CustomButton.Visible = false;
+            this.filtroGeneral.Lines = new string[0];
+            this.filtroGeneral.Location = new System.Drawing.Point(486, 124);
+            this.filtroGeneral.MaxLength = 32767;
+            this.filtroGeneral.Name = "filtroGeneral";
+            this.filtroGeneral.PasswordChar = '\0';
+            this.filtroGeneral.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.filtroGeneral.SelectedText = "";
+            this.filtroGeneral.SelectionLength = 0;
+            this.filtroGeneral.SelectionStart = 0;
+            this.filtroGeneral.ShortcutsEnabled = true;
+            this.filtroGeneral.Size = new System.Drawing.Size(167, 23);
+            this.filtroGeneral.TabIndex = 3;
+            this.filtroGeneral.UseSelectable = true;
+            this.filtroGeneral.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.filtroGeneral.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.filtroGeneral.Click += new System.EventHandler(this.metroTextBox1_Click);
             // 
             // metroButton1
             // 
@@ -113,6 +114,7 @@
             this.metroButton1.TabIndex = 6;
             this.metroButton1.Text = "Filtrar";
             this.metroButton1.UseSelectable = true;
+            this.metroButton1.Click += new System.EventHandler(this.metroButton1_Click);
             // 
             // ConsultaConciertos
             // 
@@ -121,10 +123,10 @@
             this.ClientSize = new System.Drawing.Size(772, 486);
             this.Controls.Add(this.metroButton1);
             this.Controls.Add(this.metroLink1);
-            this.Controls.Add(this.metroTextBox1);
+            this.Controls.Add(this.filtroGeneral);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.metroLabel1);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.concCombobox);
             this.Name = "ConsultaConciertos";
             this.Text = "Consultar conciertos";
             this.Load += new System.EventHandler(this.ConsultaCoonciertos_Load);
@@ -136,11 +138,11 @@
 
         #endregion
 
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox concCombobox;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private MetroFramework.Controls.MetroLink metroLink1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox filtroGeneral;
         private MetroFramework.Controls.MetroButton metroButton1;
     }
 }
