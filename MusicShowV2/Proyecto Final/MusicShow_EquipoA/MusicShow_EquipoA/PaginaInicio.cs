@@ -57,12 +57,6 @@ namespace MusicShow_EquipoA
                                              // Do somthing with this rows string, for example to put them in to a list
                 }
 
-
-
-
-
-
-
                 MenuAnunciante menAn = new MenuAnunciante();
                 menAn.setInformacion(username, myString);
                 menAn.Show();
