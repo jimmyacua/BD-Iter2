@@ -52,7 +52,7 @@ namespace MusicShow_EquipoA
 
         private void metroLink2_Click(object sender, EventArgs e)
         {
-            ModificarRepertorio mr = new ModificarRepertorio(this);
+            EliminarCancion mr = new EliminarCancion(this);
             mr.Show();
             this.Hide();
         }

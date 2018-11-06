@@ -92,12 +92,8 @@ namespace MusicShow_EquipoA
 
             AccesoBaseDatos bd = new AccesoBaseDatos();
 
-<<<<<<< HEAD
             bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interprete +"';");
             bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+";");
-=======
-            //bd.ActualizarDatos();
->>>>>>> 6dfcce8df74039a3acb0b422b1f822f0f302a9aa
 
         }
 

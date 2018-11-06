@@ -312,5 +312,40 @@ namespace Lab_Interfaces
             }
         }
 
+
+        public int EliminarCancion(string nombre)
+        {
+            int error = 0;
+            using (SqlConnection con = new SqlConnection(conexion))
+            {
+                /*El sqlCommand recibe como primer parámetro el nombre del procedimiento almacenado, 
+                 * de segundo parámetro recibe el sqlConnection
+                */
+                using (SqlCommand cmd = new SqlCommand("ElimEst", con)) //cambiar por consulta
+                {
+                    try
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+
+                        //Se preparan los parámetros que recibe el procedimiento almacenado
+                        cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = nombre;
+
+                        con.Open();
+
+                        //Se ejecuta el procedimiento almacenado
+                        cmd.ExecuteNonQuery();
+                        return error;
+                    }
+                    catch (SqlException ex)
+                    {
+
+                        error = ex.Number;
+                        return error;
+                    }
+                }
+            }
+
+        }
+
     }
 }
