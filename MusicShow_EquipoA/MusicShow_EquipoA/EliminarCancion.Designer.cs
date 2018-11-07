@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnElm = new System.Windows.Forms.Button();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.elCancionCombo = new MetroFramework.Controls.MetroComboBox();
@@ -37,34 +37,37 @@
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.botonAgregarInterprete = new System.Windows.Forms.Button();
+            this.metroLabel7 = new MetroFramework.Controls.MetroLabel();
+            this.agregarInterpreteBox = new MetroFramework.Controls.MetroTextBox();
+            this.INTER_Combo = new MetroFramework.Controls.MetroComboBox();
             this.metroLabel4 = new MetroFramework.Controls.MetroLabel();
             this.modCancionCombo = new MetroFramework.Controls.MetroComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
-            this.INTER_Combo = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
-            // button1
+            // btnElm
             // 
-            this.button1.Location = new System.Drawing.Point(166, 228);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 18;
-            this.button1.Text = "Eliminar";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnElm.Location = new System.Drawing.Point(166, 228);
+            this.btnElm.Name = "btnElm";
+            this.btnElm.Size = new System.Drawing.Size(75, 23);
+            this.btnElm.TabIndex = 18;
+            this.btnElm.Text = "Eliminar";
+            this.btnElm.UseVisualStyleBackColor = true;
+            this.btnElm.Click += new System.EventHandler(this.button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.metroLabel5);
             this.groupBox1.Controls.Add(this.elCancionCombo);
-            this.groupBox1.Controls.Add(this.button1);
-            this.groupBox1.Location = new System.Drawing.Point(377, 174);
+            this.groupBox1.Controls.Add(this.btnElm);
+            this.groupBox1.Location = new System.Drawing.Point(580, 174);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(368, 263);
+            this.groupBox1.Size = new System.Drawing.Size(360, 263);
             this.groupBox1.TabIndex = 17;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Eliminar";
@@ -104,7 +107,7 @@
             this.TB_NOMB.CustomButton.UseSelectable = true;
             this.TB_NOMB.CustomButton.Visible = false;
             this.TB_NOMB.Lines = new string[0];
-            this.TB_NOMB.Location = new System.Drawing.Point(194, 99);
+            this.TB_NOMB.Location = new System.Drawing.Point(194, 79);
             this.TB_NOMB.MaxLength = 32767;
             this.TB_NOMB.Name = "TB_NOMB";
             this.TB_NOMB.PasswordChar = '\0';
@@ -169,10 +172,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.botonAgregarInterprete);
+            this.groupBox2.Controls.Add(this.metroLabel7);
+            this.groupBox2.Controls.Add(this.agregarInterpreteBox);
             this.groupBox2.Controls.Add(this.INTER_Combo);
             this.groupBox2.Controls.Add(this.metroLabel4);
             this.groupBox2.Controls.Add(this.modCancionCombo);
-            this.groupBox2.Controls.Add(this.button2);
+            this.groupBox2.Controls.Add(this.btnMod);
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Controls.Add(this.metroLabel2);
             this.groupBox2.Controls.Add(this.metroLabel3);
@@ -180,10 +186,70 @@
             this.groupBox2.Controls.Add(this.TB_AÑO);
             this.groupBox2.Location = new System.Drawing.Point(23, 174);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(333, 263);
+            this.groupBox2.Size = new System.Drawing.Size(524, 263);
             this.groupBox2.TabIndex = 18;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar";
+            // 
+            // botonAgregarInterprete
+            // 
+            this.botonAgregarInterprete.Location = new System.Drawing.Point(362, 160);
+            this.botonAgregarInterprete.Name = "botonAgregarInterprete";
+            this.botonAgregarInterprete.Size = new System.Drawing.Size(75, 23);
+            this.botonAgregarInterprete.TabIndex = 24;
+            this.botonAgregarInterprete.Text = "Agregar interprete";
+            this.botonAgregarInterprete.UseVisualStyleBackColor = true;
+            this.botonAgregarInterprete.Click += new System.EventHandler(this.botonAgregarInterprete_Click);
+            // 
+            // metroLabel7
+            // 
+            this.metroLabel7.AutoSize = true;
+            this.metroLabel7.Location = new System.Drawing.Point(337, 109);
+            this.metroLabel7.Name = "metroLabel7";
+            this.metroLabel7.Size = new System.Drawing.Size(107, 19);
+            this.metroLabel7.TabIndex = 23;
+            this.metroLabel7.Text = "ó agregar nuevo";
+            // 
+            // agregarInterpreteBox
+            // 
+            // 
+            // 
+            // 
+            this.agregarInterpreteBox.CustomButton.Image = null;
+            this.agregarInterpreteBox.CustomButton.Location = new System.Drawing.Point(130, 1);
+            this.agregarInterpreteBox.CustomButton.Name = "";
+            this.agregarInterpreteBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.agregarInterpreteBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.agregarInterpreteBox.CustomButton.TabIndex = 1;
+            this.agregarInterpreteBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.agregarInterpreteBox.CustomButton.UseSelectable = true;
+            this.agregarInterpreteBox.CustomButton.Visible = false;
+            this.agregarInterpreteBox.Lines = new string[0];
+            this.agregarInterpreteBox.Location = new System.Drawing.Point(337, 131);
+            this.agregarInterpreteBox.MaxLength = 32767;
+            this.agregarInterpreteBox.Name = "agregarInterpreteBox";
+            this.agregarInterpreteBox.PasswordChar = '\0';
+            this.agregarInterpreteBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.agregarInterpreteBox.SelectedText = "";
+            this.agregarInterpreteBox.SelectionLength = 0;
+            this.agregarInterpreteBox.SelectionStart = 0;
+            this.agregarInterpreteBox.ShortcutsEnabled = true;
+            this.agregarInterpreteBox.Size = new System.Drawing.Size(152, 23);
+            this.agregarInterpreteBox.TabIndex = 22;
+            this.agregarInterpreteBox.UseSelectable = true;
+            this.agregarInterpreteBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.agregarInterpreteBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.agregarInterpreteBox.Click += new System.EventHandler(this.agregarInterpreteBox_Click);
+            // 
+            // INTER_Combo
+            // 
+            this.INTER_Combo.FormattingEnabled = true;
+            this.INTER_Combo.ItemHeight = 23;
+            this.INTER_Combo.Location = new System.Drawing.Point(194, 128);
+            this.INTER_Combo.Name = "INTER_Combo";
+            this.INTER_Combo.Size = new System.Drawing.Size(121, 29);
+            this.INTER_Combo.TabIndex = 21;
+            this.INTER_Combo.UseSelectable = true;
             // 
             // metroLabel4
             // 
@@ -205,19 +271,20 @@
             this.modCancionCombo.TabIndex = 19;
             this.modCancionCombo.UseSelectable = true;
             // 
-            // button2
+            // btnMod
             // 
-            this.button2.Location = new System.Drawing.Point(122, 228);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 19;
-            this.button2.Text = "Modificar";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnMod.Location = new System.Drawing.Point(122, 228);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(75, 23);
+            this.btnMod.TabIndex = 19;
+            this.btnMod.Text = "Modificar";
+            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.button2_Click);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(38, 99);
+            this.metroLabel1.Location = new System.Drawing.Point(38, 83);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(140, 19);
             this.metroLabel1.TabIndex = 11;
@@ -226,7 +293,7 @@
             // 
             // metroLink1
             // 
-            this.metroLink1.Location = new System.Drawing.Point(659, 26);
+            this.metroLink1.Location = new System.Drawing.Point(847, 26);
             this.metroLink1.Name = "metroLink1";
             this.metroLink1.Size = new System.Drawing.Size(75, 23);
             this.metroLink1.TabIndex = 19;
@@ -234,21 +301,11 @@
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
             // 
-            // INTER_Combo
-            // 
-            this.INTER_Combo.FormattingEnabled = true;
-            this.INTER_Combo.ItemHeight = 23;
-            this.INTER_Combo.Location = new System.Drawing.Point(194, 128);
-            this.INTER_Combo.Name = "INTER_Combo";
-            this.INTER_Combo.Size = new System.Drawing.Size(121, 29);
-            this.INTER_Combo.TabIndex = 21;
-            this.INTER_Combo.UseSelectable = true;
-            // 
             // EliminarCancion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(757, 476);
+            this.ClientSize = new System.Drawing.Size(965, 456);
             this.Controls.Add(this.metroLink1);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.groupBox2);
@@ -265,7 +322,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnElm;
         private System.Windows.Forms.GroupBox groupBox1;
         private MetroFramework.Controls.MetroTextBox TB_NOMB;
         private MetroFramework.Controls.MetroTextBox TB_AÑO;
@@ -273,12 +330,15 @@
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.GroupBox groupBox2;
         private MetroFramework.Controls.MetroComboBox modCancionCombo;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnMod;
         private MetroFramework.Controls.MetroLabel metroLabel4;
         private MetroFramework.Controls.MetroLabel metroLabel1;
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroComboBox elCancionCombo;
         private MetroFramework.Controls.MetroComboBox INTER_Combo;
+        private System.Windows.Forms.Button botonAgregarInterprete;
+        private MetroFramework.Controls.MetroLabel metroLabel7;
+        private MetroFramework.Controls.MetroTextBox agregarInterpreteBox;
     }
 }

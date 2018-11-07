@@ -9,11 +9,19 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 using MetroFramework;
+using Lab_Interfaces;
+using System.Data.SqlClient;
 
 namespace MusicShow_EquipoA
 {
     public partial class AnunciarConcierto : MetroForm
     {
+        // Variables
+        string nombre;
+        int cupo;
+        string descripcion;
+        string lugar;
+
         MenuAnunciante menu;
         public AnunciarConcierto(MenuAnunciante m)
         {
@@ -21,9 +29,33 @@ namespace MusicShow_EquipoA
             InitializeComponent();
         }
 
-        private void AnunciarConcierto_Load(object sender, EventArgs e)
+        private void LlenarCombobox(ComboBox combobox, string consulta)
         {
 
+            AccesoBaseDatos bd;
+            bd = new AccesoBaseDatos();
+
+            SqlDataReader datos = bd.ObtenerTabla(consulta);
+
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            combobox.SelectedIndex = 0;
+        }
+
+        private void AnunciarConcierto_Load(object sender, EventArgs e)
+        {
+            LlenarCombobox(ComboLugar, "select * from Lugar;");
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -63,6 +95,11 @@ namespace MusicShow_EquipoA
 
         private void button1_Click(object sender, EventArgs e)
         {
+            nombre = textBoxNombreConcierto.Text;
+            cupo = Int32.Parse(textBoxCupo.Text);
+            descripcion = textBoxDescripcion.Text;
+            lugar = ComboLugar.Text;
+
             agregarFecha af1 = new agregarFecha(this);
             af1.Show();
             this.Hide();
