@@ -30,6 +30,8 @@ namespace MusicShow_EquipoA
         private void EliminarCancion_Load(object sender, EventArgs e)
         {
             LlenarCombobox(elCancionCombo);
+            LlenarCombobox(modCancionCombo);
+            LlenarComboboxInterpretes(INTER_Combo);
         }
 
         private void metroLabel1_Click(object sender, EventArgs e)
@@ -77,11 +79,55 @@ namespace MusicShow_EquipoA
             combobox.SelectedIndex = 0;
         }
 
+        private void LlenarComboboxInterpretes(ComboBox combobox) {
+            SqlDataReader datos = bd.ObtenerTabla("select Nombre from InterpreteOriginal");
+            if (datos != null)
+            {
+                combobox.Items.Add("Seleccione");
+                while (datos.Read())
+                {
+                    combobox.Items.Add(datos.GetValue(0));
+                }
+            }
+            /* Si no hay tuplas en la base de datos se limpia el combobox y se
+            carga unicamente el valor "Seleccione"*/
+            else
+            {
+                combobox.Items.Clear();
+                combobox.Items.Add("Seleccione");
+            }
+            // Se pone por defecto la primera entrada del combobox seleccionada
+            combobox.SelectedIndex = 0;
+        }
+
         private void metroLink1_Click(object sender, EventArgs e)
         {
             menu.Show();
             this.Hide();
         }
+
+        private void modCancionCombo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void botonModificar_Click(object sender, EventArgs e)
+        {
+            if (modCancionCombo.Text != "Seleccione" && TB_NOMB.Text != null && INTER_Combo.Text != "Seleccione" && TB_AÑO.Text != null)
+            {
+                int nAño = int.Parse(TB_AÑO.Text);
+                string[] nomb = modCancionCombo.Text.Split(' '); 
+                bd.ActualizarDatos("Update Cancion set Nombre = '"+ TB_NOMB.Text + "' , Año = "+ nAño +", NombreInterprete = '"+INTER_Combo.Text+"' " +
+                    "WHERE Nombre in " +
+                "(Select r.NombreCancion from Repertorio r where r.NombreAn = '"+ menu.nombreAn + "' " +
+                "and r.NombreCancion = '"+ TB_NOMB.Text + "' and r.NombreInterprete = '"+ nomb[0] + "');");
+                
+            }
+            else {
+                MessageBox.Show("Debe completar todos los espacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {

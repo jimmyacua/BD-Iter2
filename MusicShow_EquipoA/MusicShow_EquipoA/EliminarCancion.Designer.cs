@@ -32,9 +32,8 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.elCancionCombo = new MetroFramework.Controls.MetroComboBox();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox3 = new MetroFramework.Controls.MetroTextBox();
-            this.metroTextBox2 = new MetroFramework.Controls.MetroTextBox();
+            this.TB_NOMB = new MetroFramework.Controls.MetroTextBox();
+            this.TB_AÑO = new MetroFramework.Controls.MetroTextBox();
             this.metroLabel3 = new MetroFramework.Controls.MetroLabel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -43,6 +42,7 @@
             this.botonModificar = new System.Windows.Forms.Button();
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroLink1 = new MetroFramework.Controls.MetroLink();
+            this.INTER_Combo = new MetroFramework.Controls.MetroComboBox();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -89,95 +89,65 @@
             this.elCancionCombo.UseSelectable = true;
             this.elCancionCombo.SelectedIndexChanged += new System.EventHandler(this.elCancionCombo_SelectedIndexChanged);
             // 
-            // metroTextBox1
+            // TB_NOMB
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[0];
-            this.metroTextBox1.Location = new System.Drawing.Point(194, 99);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(121, 23);
-            this.metroTextBox1.TabIndex = 14;
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TB_NOMB.CustomButton.Image = null;
+            this.TB_NOMB.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.TB_NOMB.CustomButton.Name = "";
+            this.TB_NOMB.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TB_NOMB.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TB_NOMB.CustomButton.TabIndex = 1;
+            this.TB_NOMB.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TB_NOMB.CustomButton.UseSelectable = true;
+            this.TB_NOMB.CustomButton.Visible = false;
+            this.TB_NOMB.Lines = new string[0];
+            this.TB_NOMB.Location = new System.Drawing.Point(194, 91);
+            this.TB_NOMB.MaxLength = 32767;
+            this.TB_NOMB.Name = "TB_NOMB";
+            this.TB_NOMB.PasswordChar = '\0';
+            this.TB_NOMB.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TB_NOMB.SelectedText = "";
+            this.TB_NOMB.SelectionLength = 0;
+            this.TB_NOMB.SelectionStart = 0;
+            this.TB_NOMB.ShortcutsEnabled = true;
+            this.TB_NOMB.Size = new System.Drawing.Size(121, 23);
+            this.TB_NOMB.TabIndex = 14;
+            this.TB_NOMB.UseSelectable = true;
+            this.TB_NOMB.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TB_NOMB.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
-            // metroTextBox3
-            // 
-            // 
-            // 
-            // 
-            this.metroTextBox3.CustomButton.Image = null;
-            this.metroTextBox3.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.metroTextBox3.CustomButton.Name = "";
-            this.metroTextBox3.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox3.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox3.CustomButton.TabIndex = 1;
-            this.metroTextBox3.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox3.CustomButton.UseSelectable = true;
-            this.metroTextBox3.CustomButton.Visible = false;
-            this.metroTextBox3.Lines = new string[0];
-            this.metroTextBox3.Location = new System.Drawing.Point(194, 134);
-            this.metroTextBox3.MaxLength = 32767;
-            this.metroTextBox3.Name = "metroTextBox3";
-            this.metroTextBox3.PasswordChar = '\0';
-            this.metroTextBox3.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox3.SelectedText = "";
-            this.metroTextBox3.SelectionLength = 0;
-            this.metroTextBox3.SelectionStart = 0;
-            this.metroTextBox3.ShortcutsEnabled = true;
-            this.metroTextBox3.Size = new System.Drawing.Size(121, 23);
-            this.metroTextBox3.TabIndex = 16;
-            this.metroTextBox3.UseSelectable = true;
-            this.metroTextBox3.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox3.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroTextBox2
+            // TB_AÑO
             // 
             // 
             // 
             // 
-            this.metroTextBox2.CustomButton.Image = null;
-            this.metroTextBox2.CustomButton.Location = new System.Drawing.Point(99, 1);
-            this.metroTextBox2.CustomButton.Name = "";
-            this.metroTextBox2.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox2.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox2.CustomButton.TabIndex = 1;
-            this.metroTextBox2.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox2.CustomButton.UseSelectable = true;
-            this.metroTextBox2.CustomButton.Visible = false;
-            this.metroTextBox2.Lines = new string[0];
-            this.metroTextBox2.Location = new System.Drawing.Point(194, 169);
-            this.metroTextBox2.MaxLength = 32767;
-            this.metroTextBox2.Name = "metroTextBox2";
-            this.metroTextBox2.PasswordChar = '\0';
-            this.metroTextBox2.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox2.SelectedText = "";
-            this.metroTextBox2.SelectionLength = 0;
-            this.metroTextBox2.SelectionStart = 0;
-            this.metroTextBox2.ShortcutsEnabled = true;
-            this.metroTextBox2.Size = new System.Drawing.Size(121, 23);
-            this.metroTextBox2.TabIndex = 15;
-            this.metroTextBox2.UseSelectable = true;
-            this.metroTextBox2.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox2.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TB_AÑO.CustomButton.Image = null;
+            this.TB_AÑO.CustomButton.Location = new System.Drawing.Point(99, 1);
+            this.TB_AÑO.CustomButton.Name = "";
+            this.TB_AÑO.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.TB_AÑO.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TB_AÑO.CustomButton.TabIndex = 1;
+            this.TB_AÑO.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TB_AÑO.CustomButton.UseSelectable = true;
+            this.TB_AÑO.CustomButton.Visible = false;
+            this.TB_AÑO.Lines = new string[0];
+            this.TB_AÑO.Location = new System.Drawing.Point(194, 169);
+            this.TB_AÑO.MaxLength = 32767;
+            this.TB_AÑO.Name = "TB_AÑO";
+            this.TB_AÑO.PasswordChar = '\0';
+            this.TB_AÑO.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TB_AÑO.SelectedText = "";
+            this.TB_AÑO.SelectionLength = 0;
+            this.TB_AÑO.SelectionStart = 0;
+            this.TB_AÑO.ShortcutsEnabled = true;
+            this.TB_AÑO.Size = new System.Drawing.Size(121, 23);
+            this.TB_AÑO.TabIndex = 15;
+            this.TB_AÑO.UseSelectable = true;
+            this.TB_AÑO.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TB_AÑO.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             // 
             // metroLabel3
             // 
@@ -193,21 +163,21 @@
             this.metroLabel2.AutoSize = true;
             this.metroLabel2.Location = new System.Drawing.Point(38, 134);
             this.metroLabel2.Name = "metroLabel2";
-            this.metroLabel2.Size = new System.Drawing.Size(111, 19);
+            this.metroLabel2.Size = new System.Drawing.Size(114, 19);
             this.metroLabel2.TabIndex = 12;
-            this.metroLabel2.Text = "Intérprete orignal";
+            this.metroLabel2.Text = "Intérprete original";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.INTER_Combo);
             this.groupBox2.Controls.Add(this.metroLabel4);
             this.groupBox2.Controls.Add(this.modCancionCombo);
             this.groupBox2.Controls.Add(this.botonModificar);
             this.groupBox2.Controls.Add(this.metroLabel1);
             this.groupBox2.Controls.Add(this.metroLabel2);
             this.groupBox2.Controls.Add(this.metroLabel3);
-            this.groupBox2.Controls.Add(this.metroTextBox1);
-            this.groupBox2.Controls.Add(this.metroTextBox3);
-            this.groupBox2.Controls.Add(this.metroTextBox2);
+            this.groupBox2.Controls.Add(this.TB_NOMB);
+            this.groupBox2.Controls.Add(this.TB_AÑO);
             this.groupBox2.Location = new System.Drawing.Point(23, 174);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(333, 263);
@@ -234,6 +204,7 @@
             this.modCancionCombo.Size = new System.Drawing.Size(121, 29);
             this.modCancionCombo.TabIndex = 19;
             this.modCancionCombo.UseSelectable = true;
+            this.modCancionCombo.SelectedIndexChanged += new System.EventHandler(this.modCancionCombo_SelectedIndexChanged);
             // 
             // botonModificar
             // 
@@ -243,11 +214,12 @@
             this.botonModificar.TabIndex = 19;
             this.botonModificar.Text = "Modificar";
             this.botonModificar.UseVisualStyleBackColor = true;
+            this.botonModificar.Click += new System.EventHandler(this.botonModificar_Click);
             // 
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(38, 99);
+            this.metroLabel1.Location = new System.Drawing.Point(38, 91);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(140, 19);
             this.metroLabel1.TabIndex = 11;
@@ -263,6 +235,16 @@
             this.metroLink1.Text = "Volver";
             this.metroLink1.UseSelectable = true;
             this.metroLink1.Click += new System.EventHandler(this.metroLink1_Click);
+            // 
+            // INTER_Combo
+            // 
+            this.INTER_Combo.FormattingEnabled = true;
+            this.INTER_Combo.ItemHeight = 23;
+            this.INTER_Combo.Location = new System.Drawing.Point(194, 128);
+            this.INTER_Combo.Name = "INTER_Combo";
+            this.INTER_Combo.Size = new System.Drawing.Size(121, 29);
+            this.INTER_Combo.TabIndex = 21;
+            this.INTER_Combo.UseSelectable = true;
             // 
             // EliminarCancion
             // 
@@ -287,9 +269,8 @@
 
         private System.Windows.Forms.Button botonEliminar;
         private System.Windows.Forms.GroupBox groupBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
-        private MetroFramework.Controls.MetroTextBox metroTextBox3;
-        private MetroFramework.Controls.MetroTextBox metroTextBox2;
+        private MetroFramework.Controls.MetroTextBox TB_NOMB;
+        private MetroFramework.Controls.MetroTextBox TB_AÑO;
         private MetroFramework.Controls.MetroLabel metroLabel3;
         private MetroFramework.Controls.MetroLabel metroLabel2;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -300,5 +281,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroLink metroLink1;
         private MetroFramework.Controls.MetroComboBox elCancionCombo;
+        private MetroFramework.Controls.MetroComboBox INTER_Combo;
     }
 }
