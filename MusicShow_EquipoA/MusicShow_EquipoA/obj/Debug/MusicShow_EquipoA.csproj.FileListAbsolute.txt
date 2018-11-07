@@ -1,0 +1,121 @@
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojResolveAssemblyReference.cache
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugarModificarConcierto.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AnunciarConcierto.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ConsultaConciertos.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.CrearPerfilDeUsuario.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCanciones.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.EliminarCancion.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarConciertos.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarRepertorio.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.PaginaInicio.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.MenuAnunciante.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.Properties.Resources.resources
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.GenerateResource.Cache
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe.config
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.pdb
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
+C:\Users\B50060\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe.config
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.pdb
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojResolveAssemblyReference.cache
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugarModificarConcierto.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AnunciarConcierto.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ConsultaConciertos.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.CrearPerfilDeUsuario.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCanciones.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.EliminarCancion.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarConciertos.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarRepertorio.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.PaginaInicio.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.MenuAnunciante.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.Properties.Resources.resources
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.GenerateResource.Cache
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
+C:\Users\b46912\Downloads\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe.config
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.pdb
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojResolveAssemblyReference.cache
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugarModificarConcierto.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AnunciarConcierto.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ConsultaConciertos.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.CrearPerfilDeUsuario.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCanciones.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.EliminarCancion.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarConciertos.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarRepertorio.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.PaginaInicio.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.MenuAnunciante.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.Properties.Resources.resources
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.GenerateResource.Cache
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
+C:\Users\B63318\Desktop\BD-Iter2\MusicShowV2\Proyecto Final\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe.config
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.pdb
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojAssemblyReference.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugarModificarConcierto.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AnunciarConcierto.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ConsultaConciertos.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.CrearPerfilDeUsuario.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCanciones.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.EliminarCancion.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarConciertos.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarRepertorio.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.PaginaInicio.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.MenuAnunciante.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.Properties.Resources.resources
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.GenerateResource.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CopyComplete
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
+C:\Users\Jimmy\Documents\U\Base de Datos 1\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe.config
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.exe
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MusicShow_EquipoA.pdb
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Design.dll
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.dll
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\bin\Debug\MetroFramework.Fonts.dll
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csprojResolveAssemblyReference.cache
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCancionesConcierto.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugar.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarLugarModificarConcierto.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AnunciarConcierto.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ConsultaConciertos.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.CrearPerfilDeUsuario.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.AgregarCanciones.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.EliminarCancion.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarConciertos.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.ModificarRepertorio.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.PaginaInicio.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.MenuAnunciante.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.Properties.Resources.resources
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.GenerateResource.Cache
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.csproj.CoreCompileInputs.cache
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.exe
+C:\Users\B50060\Documents\BD-Iter2\MusicShow_EquipoA\MusicShow_EquipoA\obj\Debug\MusicShow_EquipoA.pdb
