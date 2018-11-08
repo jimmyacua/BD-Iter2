@@ -99,6 +99,11 @@ namespace MusicShow_EquipoA
                 MessageBox.Show("¡Debe seleccionar un concierto!", "Eliminar concierto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+        /// <summary>
+        /// /
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
 
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -185,9 +190,16 @@ namespace MusicShow_EquipoA
 
         private void metroLink4_Click(object sender, EventArgs e)
         {
-            FechasModConc f = new FechasModConc(this);
-            f.Show();
-            this.Hide();
+            if (nombConc.Text != "Seleccione")
+            {
+                FechasModConc f = new FechasModConc(this);
+                f.Show();
+                this.Hide();
+            }
+            else
+            {
+                MessageBox.Show("Debe seleccionar un concierto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

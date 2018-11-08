@@ -15,10 +15,35 @@ namespace MusicShow_EquipoA
     public partial class agregarFecha : MetroForm
     {
         AnunciarConcierto ac1;
+
+        string nombre;
+        int cupo;
+        string descripcion;
+        string lugar;
+          public string nombreAnunciante;
+
+        string[] vectorFechas = new string[50];
+        int contador = 0;
+
+      
         public agregarFecha(AnunciarConcierto ac)
         {
             ac1 = ac;
+            nombreAnunciante = ac1.nombreAnunciante;
             InitializeComponent();
+
+            gridFechas.Columns.Add("Fecha","Fecha");
+
+        }
+
+        public void setDatos(string n, string d, string l, int c)
+        {
+            nombre = n;
+            descripcion = d;
+            lugar = l;
+            cupo = c;
+
+            labelNombre.Text = nombre;
         }
 
         private void agregarFecha_Load(object sender, EventArgs e)
@@ -35,8 +60,34 @@ namespace MusicShow_EquipoA
         private void metroButton1_Click(object sender, EventArgs e)
         {
             AgregarCancionesConcierto ac1 = new AgregarCancionesConcierto(this);
+            ac1.setDatos(nombre, descripcion, lugar, cupo, vectorFechas);
             ac1.Show();
             this.Hide();
+
+        }
+
+        private void botonAgregar_Click(object sender, EventArgs e)
+        {
+            string fecha = timePicker.Value.ToString("yyyy-MM-dd HH:mm");
+            vectorFechas[contador] = fecha;
+
+            DataGridViewRow row = (DataGridViewRow)gridFechas.Rows[0].Clone();
+            gridFechas.Rows.Add(row);
+
+
+            gridFechas.Rows[contador].Cells[0].Value = vectorFechas[contador];
+
+            contador++;
+
+        }
+
+        private void dateTime_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
 
         }
     }

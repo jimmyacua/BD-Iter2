@@ -112,7 +112,23 @@ namespace MusicShow_EquipoA
 
         }
 
-       
+        /*private void botonModificar_Click(object sender, EventArgs e)
+        {
+            if (modCancionCombo.Text != "Seleccione" && TB_NOMB.Text != null && INTER_Combo.Text != "Seleccione" && TB_AÑO.Text != null)
+            {
+                int nAño = int.Parse(TB_AÑO.Text);
+                string[] nomb = modCancionCombo.Text.Split(' ');
+                bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "' , Año = " + nAño + ", NombreInterprete = '" + INTER_Combo.Text + "' " +
+                    "WHERE Nombre in " +
+                "(Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' " +
+                "and r.NombreCancion = '" + TB_NOMB.Text + "' and r.NombreInterprete = '" + nomb[0] + "');");
+
+            }
+            else
+            {
+                MessageBox.Show("Debe completar todos los espacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -144,10 +160,10 @@ namespace MusicShow_EquipoA
                     bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "', Año = '" + nAño + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
                 }
                 else if (TB_NOMB.Text == "" && TB_AÑO.Text == "" && INTER_Combo.Text == "Seleccione") { //caso 8
-                    MessageBox.Show("No se llenaron los campos, no se modificó", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                    //nada
                 }
                 TB_NOMB.Clear(); INTER_Combo.Items.Clear(); TB_AÑO.Clear(); modCancionCombo.Items.Clear(); elCancionCombo.Items.Clear();
-                MessageBox.Show("La canción se modificó exitosamente", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Se modificó exitosamente", "Modificar", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 LlenarComboboxInterpretes(INTER_Combo); LlenarCombobox(modCancionCombo); LlenarCombobox(elCancionCombo);
 
             }

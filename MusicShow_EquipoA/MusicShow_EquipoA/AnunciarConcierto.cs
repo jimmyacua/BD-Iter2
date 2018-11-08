@@ -21,11 +21,13 @@ namespace MusicShow_EquipoA
         int cupo;
         string descripcion;
         string lugar;
+        public string nombreAnunciante;
 
         MenuAnunciante menu;
         public AnunciarConcierto(MenuAnunciante m)
         {
             menu = m;
+            nombreAnunciante = m.nombreAn;
             InitializeComponent();
         }
 
@@ -101,6 +103,7 @@ namespace MusicShow_EquipoA
             lugar = ComboLugar.Text;
 
             agregarFecha af1 = new agregarFecha(this);
+            af1.setDatos(nombre, descripcion, lugar, cupo);
             af1.Show();
             this.Hide();
         }
@@ -119,5 +122,7 @@ namespace MusicShow_EquipoA
             this.Hide();
 
         }
+
+
     }
 }

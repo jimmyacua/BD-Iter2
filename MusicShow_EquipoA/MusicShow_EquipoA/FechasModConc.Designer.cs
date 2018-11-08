@@ -34,7 +34,7 @@
             this.metroLabel5 = new MetroFramework.Controls.MetroLabel();
             this.botonElm = new MetroFramework.Controls.MetroButton();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.CB_Elim = new MetroFramework.Controls.MetroComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.gridFechas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -46,6 +46,7 @@
             this.finalizar.TabIndex = 38;
             this.finalizar.Text = "Finalizar";
             this.finalizar.UseSelectable = true;
+            this.finalizar.Click += new System.EventHandler(this.finalizar_Click);
             // 
             // botonAgregar
             // 
@@ -55,6 +56,7 @@
             this.botonAgregar.TabIndex = 36;
             this.botonAgregar.Text = "Agregar";
             this.botonAgregar.UseSelectable = true;
+            this.botonAgregar.Click += new System.EventHandler(this.botonAgregar_Click);
             // 
             // gridFechas
             // 
@@ -81,10 +83,11 @@
             this.botonElm.TabIndex = 40;
             this.botonElm.Text = "Eliminar";
             this.botonElm.UseSelectable = true;
+            this.botonElm.Click += new System.EventHandler(this.botonElm_Click_1);
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:MM";
+            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd HH:mm";
             this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePicker1.Location = new System.Drawing.Point(34, 120);
             this.dateTimePicker1.Name = "dateTimePicker1";
@@ -92,15 +95,15 @@
             this.dateTimePicker1.TabIndex = 42;
             this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
-            // metroComboBox1
+            // CB_Elim
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Location = new System.Drawing.Point(34, 164);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(249, 29);
-            this.metroComboBox1.TabIndex = 41;
-            this.metroComboBox1.UseSelectable = true;
+            this.CB_Elim.FormattingEnabled = true;
+            this.CB_Elim.ItemHeight = 23;
+            this.CB_Elim.Location = new System.Drawing.Point(34, 164);
+            this.CB_Elim.Name = "CB_Elim";
+            this.CB_Elim.Size = new System.Drawing.Size(249, 29);
+            this.CB_Elim.TabIndex = 41;
+            this.CB_Elim.UseSelectable = true;
             // 
             // FechasModConc
             // 
@@ -108,7 +111,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(480, 509);
             this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.metroComboBox1);
+            this.Controls.Add(this.CB_Elim);
             this.Controls.Add(this.botonElm);
             this.Controls.Add(this.finalizar);
             this.Controls.Add(this.botonAgregar);
@@ -131,6 +134,6 @@
         private MetroFramework.Controls.MetroLabel metroLabel5;
         private MetroFramework.Controls.MetroButton botonElm;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox CB_Elim;
     }
 }
