@@ -24,10 +24,17 @@ namespace MusicShow_EquipoA
         string tipoLugar;
 
         AnunciarConcierto ac;
+        ModificarConciertos mc;
 
         public AgregarLugar(AnunciarConcierto a)
         {
             ac = a;
+            InitializeComponent();
+        }
+
+        public AgregarLugar(ModificarConciertos m)
+        {
+            mc = m;
             InitializeComponent();
         }
 
@@ -65,9 +72,17 @@ namespace MusicShow_EquipoA
 
         private void metroLink1_Click(object sender, EventArgs e)
         {
-
-            ac.Show();
-            this.Hide();
+            if (ac != null){
+                ac.Show();
+                this.Hide();
+            }
+            else
+            {
+                mc.recargar();
+                mc.Show();
+                this.Hide();
+            }
+            
 
         }
 
@@ -108,6 +123,8 @@ namespace MusicShow_EquipoA
             comboBoxCanton.SelectedIndex = 0;
             textBoxUbicacionExacta.Text = ""; ;
             comboBoxTipoLugar.SelectedIndex = 0;
+
+            MessageBox.Show("El Lugar se agregó correctamente", "Agregar Lugar", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }

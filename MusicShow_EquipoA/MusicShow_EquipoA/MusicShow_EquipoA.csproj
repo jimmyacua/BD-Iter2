@@ -76,12 +76,6 @@
     <Compile Include="AgregarLugar.Designer.cs">
       <DependentUpon>AgregarLugar.cs</DependentUpon>
     </Compile>
-    <Compile Include="AgregarLugarModificarConcierto.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AgregarLugarModificarConcierto.Designer.cs">
-      <DependentUpon>AgregarLugarModificarConcierto.cs</DependentUpon>
-    </Compile>
     <Compile Include="AnunciarConcierto.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -111,6 +105,12 @@
     </Compile>
     <Compile Include="EliminarCancion.Designer.cs">
       <DependentUpon>EliminarCancion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FechasModConc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FechasModConc.Designer.cs">
+      <DependentUpon>FechasModConc.cs</DependentUpon>
     </Compile>
     <Compile Include="ModificarConciertos.cs">
       <SubType>Form</SubType>
@@ -148,9 +148,6 @@
     <EmbeddedResource Include="AgregarLugar.resx">
       <DependentUpon>AgregarLugar.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AgregarLugarModificarConcierto.resx">
-      <DependentUpon>AgregarLugarModificarConcierto.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AnunciarConcierto.resx">
       <DependentUpon>AnunciarConcierto.cs</DependentUpon>
     </EmbeddedResource>
@@ -165,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EliminarCancion.resx">
       <DependentUpon>EliminarCancion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FechasModConc.resx">
+      <DependentUpon>FechasModConc.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ModificarConciertos.resx">
       <DependentUpon>ModificarConciertos.cs</DependentUpon>
