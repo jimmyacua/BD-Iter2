@@ -104,6 +104,7 @@
             this.CB_Elim.Size = new System.Drawing.Size(249, 29);
             this.CB_Elim.TabIndex = 41;
             this.CB_Elim.UseSelectable = true;
+            this.CB_Elim.SelectedIndexChanged += new System.EventHandler(this.CB_Elim_SelectedIndexChanged);
             // 
             // FechasModConc
             // 

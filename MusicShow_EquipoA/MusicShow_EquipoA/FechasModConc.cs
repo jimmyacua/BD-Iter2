@@ -87,7 +87,7 @@ namespace MusicShow_EquipoA
                 string[] fecha = fH[1].Split('/');
                 string f = fecha[2] + "-" + fecha[1] + "-" + fecha[0];
                 string[] hora = fH[2].Split(':');
-                if (fH[3] == "p.m") {
+                if (fH[3] == "p.m.") {
                     int hr = int.Parse(hora[0]);
                     hr = (hr + 12) % 24;
                     hora[0] = "" + hr;
@@ -115,6 +115,11 @@ namespace MusicShow_EquipoA
             LlenarTabla(gridFechas, "select f.Fecha_Hora as Fecha_y_Hora, f.NombreConcierto as Nombre_Concierto, f.NombreAn as Nombre_Anunciante from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
             CB_Elim.Items.Clear();
             LlenarCombobox(CB_Elim, "select f.Fecha_Hora, f.NombreConcierto from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
+        }
+
+        private void CB_Elim_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

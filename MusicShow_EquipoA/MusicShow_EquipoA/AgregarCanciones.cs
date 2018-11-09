@@ -183,6 +183,10 @@ namespace MusicShow_EquipoA
 
                 LlenarCombobox(comboBoxInterprete, "Select * from InterpreteOriginal");
             }
+            else
+            {
+                MessageBox.Show("Debe escribir un nombre válido", "Agregar Intérprete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
 
         }
 

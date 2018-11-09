@@ -64,7 +64,7 @@ namespace MusicShow_EquipoA
                 {
                     nombC = datos.GetValue(0).ToString();
                     nombI = datos.GetValue(1).ToString();
-                    combobox.Items.Add(datos.GetValue(0) + " - " + datos.GetValue(1));
+                    combobox.Items.Add(datos.GetValue(0) + "-" + datos.GetValue(1));
                     //combobox.Items.Add(datos.GetValue(1));
                 }
             }
@@ -117,31 +117,31 @@ namespace MusicShow_EquipoA
         private void button2_Click(object sender, EventArgs e)
         {
             if (modCancionCombo.Text != "Seleccione"){
-                string[] nomb = modCancionCombo.Text.Split(' ');
+                string[] nomb = modCancionCombo.Text.Split('-');
                 if (TB_NOMB.Text != "" && TB_AÑO.Text == "" && INTER_Combo.Text == "Seleccione") //caso 1
                 {
                     // MessageBox.Show("nombreAn: "+ menu.nombreAn + "/ nmC: "+ nomb[0]+ "/ nomI: " + nomb[2], "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 }
                 else if (TB_NOMB.Text == "" && TB_AÑO.Text != "" && INTER_Combo.Text == "Seleccione") //caso 2
                 {
                     int nAño = int.Parse(TB_AÑO.Text);
-                    bd.ActualizarDatos("Update Cancion set Año = '" + nAño + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set Año = '" + nAño + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 }
                 else if (TB_NOMB.Text == "" && TB_AÑO.Text == "" && INTER_Combo.Text != "Seleccione") { //caso 3
-                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "'WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
 
                 } else if (TB_NOMB.Text != "" && TB_AÑO.Text != "" && INTER_Combo.Text != "Seleccione") { //caso 4
                     int nAño = int.Parse(TB_AÑO.Text);
-                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Año = '" + nAño + "', Nombre = '" + TB_NOMB.Text + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Año = '" + nAño + "', Nombre = '" + TB_NOMB.Text + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 } else if (TB_NOMB.Text != "" && TB_AÑO.Text == "" && INTER_Combo.Text != "Seleccione") { //caso 5
-                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Nombre = '" + TB_NOMB.Text + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Nombre = '" + TB_NOMB.Text + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 } else if (TB_NOMB.Text == "" && TB_AÑO.Text != "" && INTER_Combo.Text != "Seleccione") { //caso 6
                     int nAño = int.Parse(TB_AÑO.Text);
-                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Año = '" + nAño + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set NombreInterprete = '" + INTER_Combo.Text + "', Año = '" + nAño + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 } else if (TB_NOMB.Text != "" && TB_AÑO.Text != "" && INTER_Combo.Text == "Seleccione") { //caso 7
                     int nAño = int.Parse(TB_AÑO.Text);
-                    bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "', Año = '" + nAño + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[2] + "'); ");
+                    bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "', Año = '" + nAño + "' WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nomb[0] + "'  and r.NombreInterprete = '" + nomb[1] + "'); ");
                 }
                 else if (TB_NOMB.Text == "" && TB_AÑO.Text == "" && INTER_Combo.Text == "Seleccione") { //caso 8
                     //nada
@@ -159,18 +159,24 @@ namespace MusicShow_EquipoA
 
         private void botonAgregarInterprete_Click(object sender, EventArgs e)
         {
-            string interpreteNuevo = agregarInterpreteBox.Text;
+            if (agregarInterpreteBox.Text != "")
+            {
+                string interpreteNuevo = agregarInterpreteBox.Text;
 
-            agregarInterpreteBox.Text = "";
+                agregarInterpreteBox.Text = "";
 
-            AccesoBaseDatos bd = new AccesoBaseDatos();
-            bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interpreteNuevo + "';");
+                AccesoBaseDatos bd = new AccesoBaseDatos();
+                bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interpreteNuevo + "';");
 
 
-            agregarInterpreteBox.Text = "";
-            INTER_Combo.Items.Clear();
+                agregarInterpreteBox.Text = "";
+                INTER_Combo.Items.Clear();
 
-            LlenarComboboxInterpretes(INTER_Combo);
+                LlenarComboboxInterpretes(INTER_Combo);
+            } else
+            {
+                MessageBox.Show("Debe escribir un nombre válido", "Agregar Intérprete", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void agregarInterpreteBox_Click(object sender, EventArgs e)
@@ -189,10 +195,10 @@ namespace MusicShow_EquipoA
         private void button1_Click(object sender, EventArgs e)
         {
             String nombre = elCancionCombo.Text;
-            string[] nIter = nombre.Split(' ');
+            string[] nIter = nombre.Split('-');
             // MessageBox.Show("nombreAn: "+ menu.nombreAn + " nombreC: " + nIter[0] + " nombre Int: " + nIter[1], "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             //bd.ActualizarDatos("exec eliminarCancion @nombreAn = '" + menu.nombreAn + "', @nombreC = '" + nombC + "' , @nombreI = '" + nombI + "';");
-            bd.ActualizarDatos("Delete FROM Cancion WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nIter[0] + "' and r.NombreInterprete = '" + nIter[2] + "');");
+            bd.ActualizarDatos("Delete FROM Cancion WHERE Nombre in (Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' and r.NombreCancion = '" + nIter[0] + "' and r.NombreInterprete = '" + nIter[1] + "');");
             MessageBox.Show("Se eliminó exitosamente", "Eliminar", MessageBoxButtons.OK, MessageBoxIcon.Information);
             elCancionCombo.Items.Clear();
             modCancionCombo.Items.Clear();
