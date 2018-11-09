@@ -80,9 +80,29 @@ WHERE NombreAn = @nombreUsuario
 --CONSULTAR CONCIERTOS
 GO
 CREATE PROCEDURE consultarConciertos
+@nomAn VARCHAR(30)
 AS
 SELECT *
 FROM Concierto
+WHERE NombreAn =  @nomAn
+
+drop function filtrarConciertos
+
+GO
+CREATE FUNCTION filtrarConciertos(@nombre VARCHAR(30), @filtroTexto
+VARCHAR(30), @nomAn VARCHAR(30))
+RETURNS TABLE
+AS
+RETURN (
+SELECT *
+FROM Concierto e
+WHERE e.NombreAn = @nomAn and e.NombreConcierto LIKE '%' + @nombre + '%'
+AND (e.NombreConcierto LIKE '%' + @filtroTexto + '%'
+OR e.Cupo LIKE '%' + @filtroTexto + '%'
+OR e.NombreAn LIKE '%' + @filtroTexto + '%'
+OR e.Descripcion LIKE '%' + @filtroTexto + '%'
+OR e.NombreLugar LIKE '%' + @filtroTexto + '%'));
+
 
 
  
