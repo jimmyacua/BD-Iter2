@@ -112,23 +112,7 @@ namespace MusicShow_EquipoA
 
         }
 
-        /*private void botonModificar_Click(object sender, EventArgs e)
-        {
-            if (modCancionCombo.Text != "Seleccione" && TB_NOMB.Text != null && INTER_Combo.Text != "Seleccione" && TB_AÑO.Text != null)
-            {
-                int nAño = int.Parse(TB_AÑO.Text);
-                string[] nomb = modCancionCombo.Text.Split(' ');
-                bd.ActualizarDatos("Update Cancion set Nombre = '" + TB_NOMB.Text + "' , Año = " + nAño + ", NombreInterprete = '" + INTER_Combo.Text + "' " +
-                    "WHERE Nombre in " +
-                "(Select r.NombreCancion from Repertorio r where r.NombreAn = '" + menu.nombreAn + "' " +
-                "and r.NombreCancion = '" + TB_NOMB.Text + "' and r.NombreInterprete = '" + nomb[0] + "');");
 
-            }
-            else
-            {
-                MessageBox.Show("Debe completar todos los espacios", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            }
-        }*/
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -192,6 +176,14 @@ namespace MusicShow_EquipoA
         private void agregarInterpreteBox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void TB_AÑO_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
 
         private void button1_Click(object sender, EventArgs e)

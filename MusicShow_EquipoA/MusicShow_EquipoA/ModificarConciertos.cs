@@ -30,8 +30,8 @@ namespace MusicShow_EquipoA
 
         private void ModificarConciertos_Load(object sender, EventArgs e)
         {
-            LlenarCombobox(comboEliminar, "select NombreConcierto from Concierto where NombreAn = '"+menu.nombreAn+"'");
-            LlenarCombobox(nombConc, "select c.NombreConcierto FROM Concierto c where c.NombreAn = '"+menu.nombreAn+"';");
+            LlenarCombobox(comboEliminar, "select NombreConcierto from Concierto where NombreAn = '" + menu.nombreAn + "'");
+            LlenarCombobox(nombConc, "select c.NombreConcierto FROM Concierto c where c.NombreAn = '" + menu.nombreAn + "';");
             LlenarCombobox(comboLugar, "select NombreLugar from Lugar");
         }
 
@@ -43,7 +43,7 @@ namespace MusicShow_EquipoA
 
         private void metroLink3_Click(object sender, EventArgs e)
         {
-            if(nombConc.Text != "Seleccione")
+            if (nombConc.Text != "Seleccione")
             {
                 ModificarRepertorio m = new ModificarRepertorio(this);
                 m.Show();
@@ -53,7 +53,7 @@ namespace MusicShow_EquipoA
             {
                 MessageBox.Show("¡Debe seleccionar un concierto!", "Modificar Repertorio", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
-            
+
         }
 
         private void metroComboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -95,15 +95,11 @@ namespace MusicShow_EquipoA
                 nombConc.Items.Clear();
                 LlenarCombobox(nombConc, "select c.NombreConcierto FROM Concierto c where c.NombreAn = '" + menu.nombreAn + "';");
             }
-            else {
+            else
+            {
                 MessageBox.Show("¡Debe seleccionar un concierto!", "Eliminar concierto", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
-        /// <summary>
-        /// /
-        /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
 
         private void metroComboBox2_SelectedIndexChanged(object sender, EventArgs e)
         {
@@ -114,7 +110,8 @@ namespace MusicShow_EquipoA
 
         private void button2_Click(object sender, EventArgs e)
         {
-            if (nombConc.Text != "Seleccione") {
+            if (nombConc.Text != "Seleccione")
+            {
                 if (nombre.Text != "" && cupo.Text == "" && descripcion.Text == "" && comboLugar.Text == "Seleccione") //caso 1
                 {
                     bd.ActualizarDatos("update Concierto set NombreConcierto = '" + nombre.Text + "' where NombreConcierto = '" + nombConc.Text + "' and NombreAn = '" + menu.nombreAn + "'");
@@ -172,7 +169,7 @@ namespace MusicShow_EquipoA
             {
                 MessageBox.Show("Debe seleccionar un concierto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-            
+
         }
 
         private void metroLink2_Click(object sender, EventArgs e)
@@ -180,25 +177,27 @@ namespace MusicShow_EquipoA
             AgregarLugar a = new AgregarLugar(this);
             a.Show();
             this.Hide();
-            
+
         }
 
-        public void recargar() {
+        public void recargar()
+        {
             comboLugar.Items.Clear();
             LlenarCombobox(comboLugar, "select NombreLugar from  Lugar");
         }
 
         private void metroLink4_Click(object sender, EventArgs e)
         {
-            if (nombConc.Text != "Seleccione")
+            FechasModConc f = new FechasModConc(this);
+            f.Show();
+            this.Hide();
+        }
+
+        private void cupo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                FechasModConc f = new FechasModConc(this);
-                f.Show();
-                this.Hide();
-            }
-            else
-            {
-                MessageBox.Show("Debe seleccionar un concierto", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                e.Handled = true;
             }
         }
     }

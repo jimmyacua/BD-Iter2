@@ -73,6 +73,7 @@ namespace MusicShow_EquipoA
         private void metroLink1_Click(object sender, EventArgs e)
         {
             if (ac != null){
+                ac.recargar();
                 ac.Show();
                 this.Hide();
             }

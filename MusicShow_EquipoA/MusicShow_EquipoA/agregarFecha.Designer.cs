@@ -51,6 +51,7 @@
             // 
             // gridFechas
             // 
+            this.gridFechas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridFechas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridFechas.Location = new System.Drawing.Point(34, 216);
             this.gridFechas.Name = "gridFechas";

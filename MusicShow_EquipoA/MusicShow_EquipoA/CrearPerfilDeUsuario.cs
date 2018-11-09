@@ -64,19 +64,25 @@ namespace MusicShow_EquipoA
             else {
                 tipoAn = "Solista";
             }
-
-            name = TX_Nombre.Text;
-            int error = user.AgregarAnunciante(name, tipoAn);
-            if (error != 0)
+            if (TX_Nombre.Text != "")
             {
-                MessageBox.Show("Ya existe un usuario asociado a este nombre en el sistema", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                name = TX_Nombre.Text;
+                int error = user.AgregarAnunciante(name, tipoAn);
+                if (error != 0)
+                {
+                    MessageBox.Show("Ya existe un usuario asociado a este nombre en el sistema", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    MenuAnunciante menu = new MenuAnunciante();
+                    menu.setInformacion(name, tipoAn);
+                    menu.Show();
+                    Hide();
+
+                }
             }
             else {
-                MenuAnunciante menu = new MenuAnunciante();
-                menu.setInformacion(name, tipoAn);
-                menu.Show();
-                Hide();
-               
+                MessageBox.Show("Debe escribir un nombre válido", "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
 

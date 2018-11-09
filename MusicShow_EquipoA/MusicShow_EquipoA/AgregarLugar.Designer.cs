@@ -123,7 +123,7 @@
             this.textBoxUbicacionExacta.CustomButton.Visible = false;
             this.textBoxUbicacionExacta.Lines = new string[0];
             this.textBoxUbicacionExacta.Location = new System.Drawing.Point(170, 158);
-            this.textBoxUbicacionExacta.MaxLength = 32767;
+            this.textBoxUbicacionExacta.MaxLength = 30;
             this.textBoxUbicacionExacta.Name = "textBoxUbicacionExacta";
             this.textBoxUbicacionExacta.PasswordChar = '\0';
             this.textBoxUbicacionExacta.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -189,7 +189,7 @@
             this.textBoxNombreLugar.CustomButton.Visible = false;
             this.textBoxNombreLugar.Lines = new string[0];
             this.textBoxNombreLugar.Location = new System.Drawing.Point(170, 29);
-            this.textBoxNombreLugar.MaxLength = 32767;
+            this.textBoxNombreLugar.MaxLength = 30;
             this.textBoxNombreLugar.Name = "textBoxNombreLugar";
             this.textBoxNombreLugar.PasswordChar = '\0';
             this.textBoxNombreLugar.ScrollBars = System.Windows.Forms.ScrollBars.None;

@@ -126,6 +126,8 @@ namespace MusicShow_EquipoA
             bd.ActualizarDatos("exec agregarCanciones @nombre = '" + nombre +"', @nombrein = '"+ interprete +"', @idioma = '" + idioma +"', @genero = '"+ genero +"', @anno = " + año+ ", @nombreAnunciante = '" + menu.nombreAn + "';");
 
             LlenarTabla(gridCanciones);
+
+            MessageBox.Show("La canción se agregó exitosamente", "AGREGAR CANCIONES", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void metroLink1_Click(object sender, EventArgs e)
@@ -166,19 +168,30 @@ namespace MusicShow_EquipoA
 
         private void botonAgregarInterprete_Click(object sender, EventArgs e)
         {
-            string interpreteNuevo = agregarInterpreteBox.Text;
+            if(agregarInterpreteBox.Text != "")
+            {
+                string interpreteNuevo = agregarInterpreteBox.Text;
 
-            agregarInterpreteBox.Text = "";
+                agregarInterpreteBox.Text = "";
 
-            AccesoBaseDatos bd = new AccesoBaseDatos();
-            bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interpreteNuevo + "';");
+                AccesoBaseDatos bd = new AccesoBaseDatos();
+                bd.ActualizarDatos("exec agregarInterprete @nombre = '" + interpreteNuevo + "';");
 
 
-            agregarInterpreteBox.Text = "";
-            comboBoxInterprete.Items.Clear();
+                agregarInterpreteBox.Text = "";
+                comboBoxInterprete.Items.Clear();
 
-            LlenarCombobox(comboBoxInterprete, "Select * from InterpreteOriginal");
+                LlenarCombobox(comboBoxInterprete, "Select * from InterpreteOriginal");
+            }
 
+        }
+
+        private void añoCancionBox_KeyPress(object sender, KeyPressEventArgs e) //para que solo permita numeros
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

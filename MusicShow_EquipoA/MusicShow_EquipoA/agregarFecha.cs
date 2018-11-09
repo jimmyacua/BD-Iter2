@@ -24,12 +24,18 @@ namespace MusicShow_EquipoA
 
         string[] vectorFechas = new string[50];
         int contador = 0;
+        public MenuAnunciante menuNuevo;
 
-      
+
+
+
         public agregarFecha(AnunciarConcierto ac)
         {
             ac1 = ac;
             nombreAnunciante = ac1.nombreAnunciante;
+
+             menuNuevo = ac1.menu;
+
             InitializeComponent();
 
             gridFechas.Columns.Add("Fecha","Fecha");
@@ -69,15 +75,36 @@ namespace MusicShow_EquipoA
         private void botonAgregar_Click(object sender, EventArgs e)
         {
             string fecha = timePicker.Value.ToString("yyyy-MM-dd HH:mm");
-            vectorFechas[contador] = fecha;
-
-            DataGridViewRow row = (DataGridViewRow)gridFechas.Rows[0].Clone();
-            gridFechas.Rows.Add(row);
 
 
-            gridFechas.Rows[contador].Cells[0].Value = vectorFechas[contador];
+            int contadorT = 0;
+            bool esta = false;
 
-            contador++;
+            while (!esta && contadorT < 50)
+            {
+                if (vectorFechas[contadorT] == fecha)
+                {
+                    esta = true;
+                }
+                contadorT++;
+            }
+
+            if (!esta)
+            {
+                vectorFechas[contador] = fecha;
+
+                DataGridViewRow row = (DataGridViewRow)gridFechas.Rows[0].Clone();
+                gridFechas.Rows.Add(row);
+
+
+                gridFechas.Rows[contador].Cells[0].Value = vectorFechas[contador];
+
+                contador++;
+
+            }
+                         
+
+     
 
         }
 

@@ -48,6 +48,8 @@
             // 
             // comboBoxLugar
             // 
+            this.comboBoxLugar.BackColor = System.Drawing.SystemColors.Info;
+            this.comboBoxLugar.ForeColor = System.Drawing.SystemColors.InactiveCaption;
             this.comboBoxLugar.FormattingEnabled = true;
             this.comboBoxLugar.ItemHeight = 23;
             this.comboBoxLugar.Location = new System.Drawing.Point(186, 136);

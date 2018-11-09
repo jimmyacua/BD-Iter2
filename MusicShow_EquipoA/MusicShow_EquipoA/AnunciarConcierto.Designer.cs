@@ -60,7 +60,7 @@
             this.textBoxNombreConcierto.CustomButton.Visible = false;
             this.textBoxNombreConcierto.Lines = new string[0];
             this.textBoxNombreConcierto.Location = new System.Drawing.Point(179, 81);
-            this.textBoxNombreConcierto.MaxLength = 32767;
+            this.textBoxNombreConcierto.MaxLength = 30;
             this.textBoxNombreConcierto.Name = "textBoxNombreConcierto";
             this.textBoxNombreConcierto.PasswordChar = '\0';
             this.textBoxNombreConcierto.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -100,7 +100,7 @@
             this.textBoxCupo.CustomButton.Visible = false;
             this.textBoxCupo.Lines = new string[0];
             this.textBoxCupo.Location = new System.Drawing.Point(179, 123);
-            this.textBoxCupo.MaxLength = 32767;
+            this.textBoxCupo.MaxLength = 7;
             this.textBoxCupo.Name = "textBoxCupo";
             this.textBoxCupo.PasswordChar = '\0';
             this.textBoxCupo.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -114,6 +114,7 @@
             this.textBoxCupo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxCupo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
             this.textBoxCupo.Click += new System.EventHandler(this.metroTextBox3_Click);
+            this.textBoxCupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxCupo_KeyPress);
             // 
             // metroLabel4
             // 
@@ -141,7 +142,7 @@
             this.textBoxDescripcion.CustomButton.Visible = false;
             this.textBoxDescripcion.Lines = new string[0];
             this.textBoxDescripcion.Location = new System.Drawing.Point(179, 169);
-            this.textBoxDescripcion.MaxLength = 32767;
+            this.textBoxDescripcion.MaxLength = 50;
             this.textBoxDescripcion.Name = "textBoxDescripcion";
             this.textBoxDescripcion.PasswordChar = '\0';
             this.textBoxDescripcion.ScrollBars = System.Windows.Forms.ScrollBars.None;

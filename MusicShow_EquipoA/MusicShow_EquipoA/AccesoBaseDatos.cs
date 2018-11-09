@@ -17,7 +17,7 @@ namespace Lab_Interfaces
         String conexion = "Data Source=10.1.4.55; Initial Catalog= DB_EQUIPO_A; Integrated Security=SSPI";
 
         /*En Initial Catalog se agrega la base de datos propia. Intregated Security = false es para utilizar SQL SERVER Authentication*/
-        //String conexion = "Data Source=10.1.4.55;User ID=B50060;Password=*****; Initial Catalog=DB_EQUIPO_A; Integrated Security=false";
+        //String conexion = "Data Source=10.1.4.55;User ID=B50060;Password=***; Initial Catalog=DB_EQUIPO_A; Integrated Security=false";
         
         /**
          * Constructor de la clase
@@ -274,7 +274,7 @@ namespace Lab_Interfaces
         }
 
 
-        public DataTable FiltrarPorNombre(String nombre, String filtroTexto)
+        public DataTable FiltrarPorNombre(String nombre, String filtroTexto, String nombAn)
         {
             using (SqlConnection con = new SqlConnection(conexion))
             {
@@ -282,7 +282,7 @@ namespace Lab_Interfaces
                 procedimiento almacenado,
                 * de segundo parámetro recibe el sqlConnection
                 */
-                using (SqlCommand cmd = new SqlCommand("SELECT * from dbo.filtrarConciertos(@nombre, @filtroTexto)", con))
+                using (SqlCommand cmd = new SqlCommand("SELECT * from dbo.filtrarConciertos(@nombre, @filtroTexto, @nomAn)", con))
                 {
                     try
                     {
@@ -297,6 +297,12 @@ namespace Lab_Interfaces
                         paramTexto.Value = filtroTexto;
                         paramTexto.Direction = ParameterDirection.Input;
                         cmd.Parameters.Add(paramTexto);
+
+                        SqlParameter paramAn = new SqlParameter("@nomAn", SqlDbType.VarChar);
+                        paramAn.Value = nombAn;
+                        paramAn.Direction = ParameterDirection.Input;
+                        cmd.Parameters.Add(paramAn);
+
                         /*Se abre la conexión*/
                         con.Open();
                         SqlDataAdapter da = new SqlDataAdapter(cmd);

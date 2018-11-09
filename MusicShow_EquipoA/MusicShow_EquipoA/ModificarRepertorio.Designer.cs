@@ -86,10 +86,11 @@
             // 
             // TablaCanciones
             // 
+            this.TablaCanciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.TablaCanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TablaCanciones.Location = new System.Drawing.Point(23, 278);
             this.TablaCanciones.Name = "TablaCanciones";
-            this.TablaCanciones.Size = new System.Drawing.Size(502, 217);
+            this.TablaCanciones.Size = new System.Drawing.Size(877, 217);
             this.TablaCanciones.TabIndex = 3;
             this.TablaCanciones.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -104,6 +105,7 @@
             this.groupBox1.TabIndex = 22;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Seleccione canciones que desea eliminar";
+            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
             // 
             // Eliminar
             // 
@@ -120,9 +122,9 @@
             this.metroLabel1.AutoSize = true;
             this.metroLabel1.Location = new System.Drawing.Point(34, 28);
             this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(73, 19);
+            this.metroLabel1.Size = new System.Drawing.Size(154, 19);
             this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Repertorio";
+            this.metroLabel1.Text = "Repertorio del concierto";
             // 
             // ReperEl
             // 

@@ -34,6 +34,7 @@
             this.comboEliminar = new MetroFramework.Controls.MetroComboBox();
             this.BT_Elm = new System.Windows.Forms.Button();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.metroLink4 = new MetroFramework.Controls.MetroLink();
             this.metroLink3 = new MetroFramework.Controls.MetroLink();
             this.comboLugar = new MetroFramework.Controls.MetroComboBox();
             this.metroLink2 = new MetroFramework.Controls.MetroLink();
@@ -47,7 +48,6 @@
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
             this.nombre = new MetroFramework.Controls.MetroTextBox();
             this.cupo = new MetroFramework.Controls.MetroTextBox();
-            this.metroLink4 = new MetroFramework.Controls.MetroLink();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -127,6 +127,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Modificar";
             // 
+            // metroLink4
+            // 
+            this.metroLink4.Location = new System.Drawing.Point(19, 280);
+            this.metroLink4.Name = "metroLink4";
+            this.metroLink4.Size = new System.Drawing.Size(108, 50);
+            this.metroLink4.TabIndex = 29;
+            this.metroLink4.Text = "Agregar o\r\nEliminar Fechas";
+            this.metroLink4.UseSelectable = true;
+            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
+            // 
             // metroLink3
             // 
             this.metroLink3.Location = new System.Drawing.Point(6, 394);
@@ -191,7 +201,7 @@
             this.descripcion.CustomButton.Visible = false;
             this.descripcion.Lines = new string[0];
             this.descripcion.Location = new System.Drawing.Point(194, 175);
-            this.descripcion.MaxLength = 32767;
+            this.descripcion.MaxLength = 50;
             this.descripcion.Name = "descripcion";
             this.descripcion.PasswordChar = '\0';
             this.descripcion.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -269,7 +279,7 @@
             this.nombre.CustomButton.Visible = false;
             this.nombre.Lines = new string[0];
             this.nombre.Location = new System.Drawing.Point(194, 99);
-            this.nombre.MaxLength = 32767;
+            this.nombre.MaxLength = 30;
             this.nombre.Name = "nombre";
             this.nombre.PasswordChar = '\0';
             this.nombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -299,7 +309,7 @@
             this.cupo.CustomButton.Visible = false;
             this.cupo.Lines = new string[0];
             this.cupo.Location = new System.Drawing.Point(194, 134);
-            this.cupo.MaxLength = 32767;
+            this.cupo.MaxLength = 7;
             this.cupo.Name = "cupo";
             this.cupo.PasswordChar = '\0';
             this.cupo.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -312,16 +322,7 @@
             this.cupo.UseSelectable = true;
             this.cupo.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.cupo.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            // 
-            // metroLink4
-            // 
-            this.metroLink4.Location = new System.Drawing.Point(19, 280);
-            this.metroLink4.Name = "metroLink4";
-            this.metroLink4.Size = new System.Drawing.Size(108, 50);
-            this.metroLink4.TabIndex = 29;
-            this.metroLink4.Text = "Agregar o\r\nEliminar Fechas";
-            this.metroLink4.UseSelectable = true;
-            this.metroLink4.Click += new System.EventHandler(this.metroLink4_Click);
+            this.cupo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.cupo_KeyPress);
             // 
             // ModificarConciertos
             // 

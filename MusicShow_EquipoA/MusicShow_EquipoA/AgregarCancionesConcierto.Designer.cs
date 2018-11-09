@@ -68,6 +68,7 @@
             // 
             // gridAgregarC
             // 
+            this.gridAgregarC.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridAgregarC.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridAgregarC.Location = new System.Drawing.Point(6, 110);
             this.gridAgregarC.Name = "gridAgregarC";
@@ -143,6 +144,7 @@
             // 
             // gridEntradas
             // 
+            this.gridEntradas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridEntradas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridEntradas.Location = new System.Drawing.Point(6, 160);
             this.gridEntradas.Name = "gridEntradas";
@@ -175,7 +177,7 @@
             this.textBoxPrecio.CustomButton.Visible = false;
             this.textBoxPrecio.Lines = new string[0];
             this.textBoxPrecio.Location = new System.Drawing.Point(162, 79);
-            this.textBoxPrecio.MaxLength = 32767;
+            this.textBoxPrecio.MaxLength = 10;
             this.textBoxPrecio.Name = "textBoxPrecio";
             this.textBoxPrecio.PasswordChar = '\0';
             this.textBoxPrecio.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -188,6 +190,7 @@
             this.textBoxPrecio.UseSelectable = true;
             this.textBoxPrecio.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.textBoxPrecio.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.textBoxPrecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBoxPrecio_KeyPress);
             // 
             // metroLabel1
             // 
@@ -224,7 +227,7 @@
             this.textBoxTipo.CustomButton.Visible = false;
             this.textBoxTipo.Lines = new string[0];
             this.textBoxTipo.Location = new System.Drawing.Point(162, 39);
-            this.textBoxTipo.MaxLength = 32767;
+            this.textBoxTipo.MaxLength = 30;
             this.textBoxTipo.Name = "textBoxTipo";
             this.textBoxTipo.PasswordChar = '\0';
             this.textBoxTipo.ScrollBars = System.Windows.Forms.ScrollBars.None;

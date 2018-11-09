@@ -18,8 +18,10 @@ namespace MusicShow_EquipoA
     {
         Usuario usuario;
         MenuAnunciante menu;
+        AccesoBaseDatos bd;
         public ConsultaConciertos(MenuAnunciante m)
         {
+            bd = new AccesoBaseDatos();
             menu = m;
             InitializeComponent();
             usuario = new Usuario();
@@ -28,7 +30,7 @@ namespace MusicShow_EquipoA
         private void ConsultaCoonciertos_Load(object sender, EventArgs e)
         {
             this.LlenarCombobox(concCombobox);
-            this.LlenarTabla(dataGridView1, null, null);
+            this.LlenarTablaInicio(dataGridView1, null, null);
         }
 
         private void metroTextBox1_Click(object sender, EventArgs e)
@@ -43,9 +45,9 @@ namespace MusicShow_EquipoA
         }
 
         private void LlenarCombobox(ComboBox combobox) {
-            AccesoBaseDatos bd;
-            bd = new AccesoBaseDatos();
-            SqlDataReader datos = bd.ObtenerTabla("exec consultarConciertos");
+            
+            
+            SqlDataReader datos = bd.ObtenerTabla("EXEC consultarConciertos @nomAn = '"+menu.nombreAn+"'");
             if (datos != null)
             {
                 combobox.Items.Add("Seleccione");
@@ -66,12 +68,30 @@ namespace MusicShow_EquipoA
         }
 
 
+        private void LlenarTablaInicio(DataGridView dataGridView, string fltroNombre, string filtro)
+        {
+            /* Obtiene un dataTable con todos los estudiantes que se encuentran
+            en la base de datos (null, null) es para vengan todas las tuplas sin
+            ningún filtro*/
+            DataTable tabla = bd.EjecutarConsultaTabla("EXEC consultarConciertos @nomAn = '" + menu.nombreAn + "'");
+            // Se inicializa el source para cargar el datagridview y se le asigna el dataTable obtenido
+            BindingSource bindingSource = new BindingSource();
+            bindingSource.DataSource = tabla;
+            dataGridView.AutoResizeColumns(DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader);
+            dataGridView.DataSource = bindingSource;
+            // Ciclo para darle un ancho a cada columna del datagridview proporcionado
+            for (int i = 0; i < dataGridView.ColumnCount; i++)
+            {
+                dataGridView.Columns[i].Width = 100;
+            }
+        }
+
         private void LlenarTabla(DataGridView dataGridView, string fltroNombre, string filtro)
         {
             /* Obtiene un dataTable con todos los estudiantes que se encuentran
             en la base de datos (null, null) es para vengan todas las tuplas sin
             ningún filtro*/
-            DataTable tabla = usuario.obtenerConcierto(fltroNombre, filtro);
+            DataTable tabla = usuario.obtenerConcierto(fltroNombre, filtro, menu.nombreAn);
             // Se inicializa el source para cargar el datagridview y se le asigna el dataTable obtenido
             BindingSource bindingSource = new BindingSource();
             bindingSource.DataSource = tabla;

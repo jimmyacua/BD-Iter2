@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CrearPerfilDeUsuario));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.RB_Agrupcion = new MetroFramework.Controls.MetroRadioButton();
             this.TX_Nombre = new MetroFramework.Controls.MetroTextBox();
@@ -41,9 +42,10 @@
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(393, 106);
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(193, 87);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 111);
+            this.pictureBox1.Size = new System.Drawing.Size(167, 161);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -73,8 +75,8 @@
             this.TX_Nombre.CustomButton.UseSelectable = true;
             this.TX_Nombre.CustomButton.Visible = false;
             this.TX_Nombre.Lines = new string[0];
-            this.TX_Nombre.Location = new System.Drawing.Point(418, 299);
-            this.TX_Nombre.MaxLength = 32767;
+            this.TX_Nombre.Location = new System.Drawing.Point(263, 299);
+            this.TX_Nombre.MaxLength = 30;
             this.TX_Nombre.Name = "TX_Nombre";
             this.TX_Nombre.PasswordChar = '\0';
             this.TX_Nombre.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -92,7 +94,7 @@
             // metroLabel1
             // 
             this.metroLabel1.AutoSize = true;
-            this.metroLabel1.Location = new System.Drawing.Point(322, 299);
+            this.metroLabel1.Location = new System.Drawing.Point(167, 299);
             this.metroLabel1.Name = "metroLabel1";
             this.metroLabel1.Size = new System.Drawing.Size(59, 19);
             this.metroLabel1.TabIndex = 3;
@@ -103,7 +105,7 @@
             // 
             this.groupBox1.Controls.Add(this.RB_solista);
             this.groupBox1.Controls.Add(this.RB_Agrupcion);
-            this.groupBox1.Location = new System.Drawing.Point(322, 373);
+            this.groupBox1.Location = new System.Drawing.Point(172, 373);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(213, 100);
             this.groupBox1.TabIndex = 4;
@@ -124,7 +126,7 @@
             // 
             // botonGuardar
             // 
-            this.botonGuardar.Location = new System.Drawing.Point(393, 521);
+            this.botonGuardar.Location = new System.Drawing.Point(231, 512);
             this.botonGuardar.Name = "botonGuardar";
             this.botonGuardar.Size = new System.Drawing.Size(75, 23);
             this.botonGuardar.TabIndex = 5;
@@ -136,7 +138,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(903, 610);
+            this.ClientSize = new System.Drawing.Size(567, 582);
             this.Controls.Add(this.botonGuardar);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.metroLabel1);

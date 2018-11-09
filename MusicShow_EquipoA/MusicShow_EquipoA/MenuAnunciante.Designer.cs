@@ -56,11 +56,14 @@
             // ML_Nombre
             // 
             this.ML_Nombre.AutoSize = true;
+            this.ML_Nombre.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.ML_Nombre.Location = new System.Drawing.Point(208, 80);
             this.ML_Nombre.Name = "ML_Nombre";
-            this.ML_Nombre.Size = new System.Drawing.Size(80, 19);
+            this.ML_Nombre.Size = new System.Drawing.Size(84, 19);
             this.ML_Nombre.TabIndex = 13;
             this.ML_Nombre.Text = "MODIFICAR";
+            this.ML_Nombre.UseMnemonic = false;
+            this.ML_Nombre.UseStyleColors = true;
             // 
             // metroLabel3
             // 
@@ -74,47 +77,54 @@
             // ML_TIPO
             // 
             this.ML_TIPO.AutoSize = true;
+            this.ML_TIPO.FontWeight = MetroFramework.MetroLabelWeight.Regular;
             this.ML_TIPO.Location = new System.Drawing.Point(208, 111);
             this.ML_TIPO.Name = "ML_TIPO";
-            this.ML_TIPO.Size = new System.Drawing.Size(80, 19);
+            this.ML_TIPO.Size = new System.Drawing.Size(84, 19);
             this.ML_TIPO.TabIndex = 15;
             this.ML_TIPO.Text = "MODIFICAR";
+            this.ML_TIPO.UseMnemonic = false;
+            this.ML_TIPO.UseStyleColors = true;
             // 
             // linkAgregarCanciones
             // 
-            this.linkAgregarCanciones.Location = new System.Drawing.Point(127, 40);
+            this.linkAgregarCanciones.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.linkAgregarCanciones.Location = new System.Drawing.Point(87, 42);
             this.linkAgregarCanciones.Name = "linkAgregarCanciones";
-            this.linkAgregarCanciones.Size = new System.Drawing.Size(75, 23);
+            this.linkAgregarCanciones.Size = new System.Drawing.Size(153, 23);
             this.linkAgregarCanciones.TabIndex = 16;
-            this.linkAgregarCanciones.Text = "Agregar";
+            this.linkAgregarCanciones.Text = "Agregar Canciones";
             this.linkAgregarCanciones.UseSelectable = true;
             this.linkAgregarCanciones.Click += new System.EventHandler(this.metroLink1_Click);
             // 
             // metroLink2
             // 
-            this.metroLink2.Location = new System.Drawing.Point(127, 85);
+            this.metroLink2.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.metroLink2.Location = new System.Drawing.Point(76, 87);
             this.metroLink2.Name = "metroLink2";
-            this.metroLink2.Size = new System.Drawing.Size(75, 23);
+            this.metroLink2.Size = new System.Drawing.Size(179, 23);
             this.metroLink2.TabIndex = 17;
-            this.metroLink2.Text = "Modificar";
+            this.metroLink2.Text = "Modificar Canciones";
             this.metroLink2.UseSelectable = true;
             this.metroLink2.Click += new System.EventHandler(this.metroLink2_Click);
             // 
             // metroLink3
             // 
-            this.metroLink3.Location = new System.Drawing.Point(108, 40);
+            this.metroLink3.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.metroLink3.Location = new System.Drawing.Point(76, 41);
             this.metroLink3.Name = "metroLink3";
-            this.metroLink3.Size = new System.Drawing.Size(75, 23);
+            this.metroLink3.Size = new System.Drawing.Size(155, 23);
             this.metroLink3.TabIndex = 18;
-            this.metroLink3.Text = "Agregar";
+            this.metroLink3.Text = "Anunciar Concierto";
             this.metroLink3.UseSelectable = true;
             this.metroLink3.Click += new System.EventHandler(this.metroLink3_Click);
             // 
             // metroLink4
             // 
-            this.metroLink4.Location = new System.Drawing.Point(82, 85);
+            this.metroLink4.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.metroLink4.Location = new System.Drawing.Point(69, 85);
             this.metroLink4.Name = "metroLink4";
-            this.metroLink4.Size = new System.Drawing.Size(134, 23);
+            this.metroLink4.Size = new System.Drawing.Size(158, 23);
             this.metroLink4.TabIndex = 19;
             this.metroLink4.Text = "Modificar o eliminar";
             this.metroLink4.UseSelectable = true;
@@ -145,9 +155,10 @@
             // 
             // metroLink5
             // 
-            this.metroLink5.Location = new System.Drawing.Point(82, 124);
+            this.metroLink5.FontSize = MetroFramework.MetroLinkSize.Medium;
+            this.metroLink5.Location = new System.Drawing.Point(71, 124);
             this.metroLink5.Name = "metroLink5";
-            this.metroLink5.Size = new System.Drawing.Size(134, 23);
+            this.metroLink5.Size = new System.Drawing.Size(158, 23);
             this.metroLink5.TabIndex = 20;
             this.metroLink5.Text = "Consultar concierto";
             this.metroLink5.UseSelectable = true;

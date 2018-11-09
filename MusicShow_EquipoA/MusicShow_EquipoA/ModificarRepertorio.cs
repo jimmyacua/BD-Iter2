@@ -37,7 +37,7 @@ namespace MusicShow_EquipoA
                 {
                     datos.GetValue(0).ToString();
                     datos.GetValue(1).ToString();
-                    combobox.Items.Add(datos.GetValue(0) + " - " + datos.GetValue(1));
+                    combobox.Items.Add(datos.GetValue(0) + "-" + datos.GetValue(1));
                 }
             }
             /* Si no hay tuplas en la base de datos se limpia el combobox y se
@@ -75,9 +75,11 @@ namespace MusicShow_EquipoA
         {
             if(ReperAg.Text!= "Seleccione")
             {
-                string[] nomb = ReperAg.Text.Split(' ');
-                bd.ActualizarDatos("insert into Se_Tocan values('"+mc.nombreConcierto+"', '"+mc.nombreAn+"', '"+ nomb[0]+ "','"+ nomb[2] + "');");
+                string[] nomb = ReperAg.Text.Split('-');
+                bd.ActualizarDatos("insert into Se_Tocan values('"+mc.nombreConcierto+"', '"+mc.nombreAn+"', '"+ nomb[0]+ "','"+ nomb[1] + "');");
                 LlenarTabla(TablaCanciones);
+                ReperEl.Items.Clear();
+                LlenarCombobox(ReperEl, "select NombreCancion, NombreInterprete from Se_Tocan where NombreConc = '" + mc.nombreConcierto + "' and NombreAn = '" + mc.nombreAn + "' "); 
             }
         }
 
@@ -101,13 +103,18 @@ namespace MusicShow_EquipoA
 
         private void Eliminar_Click(object sender, EventArgs e)
         {
-            string[] nomb = ReperEl.Text.Split(' ');
-            bd.ActualizarDatos("delete from Se_Tocan where NombreConc = '" + mc.nombreConcierto + "' and NombreAn = '" + mc.nombreAn + "' and NombreCancion = '" + nomb[0] + "' and NombreInterprete = '" + nomb[2] + "'");
+            string[] nomb = ReperEl.Text.Split('-');
+            bd.ActualizarDatos("delete from Se_Tocan where NombreConc = '" + mc.nombreConcierto + "' and NombreAn = '" + mc.nombreAn + "' and NombreCancion = '" + nomb[0] + "' and NombreInterprete = '" + nomb[1] + "'");
             ReperAg.Items.Clear();
             ReperEl.Items.Clear();
             LlenarCombobox(ReperAg, "select r.NombreCancion, r.NombreInterprete from Anunciante a join Repertorio r on a.NombreAn = r.NombreAn where a.NombreAn = '" + mc.nombreAn + "'");
             LlenarCombobox(ReperEl, "select NombreCancion, NombreInterprete from Se_Tocan where NombreConc = '" + mc.nombreConcierto + "' and NombreAn = '" + mc.nombreAn + "' ");
             LlenarTabla(TablaCanciones);
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

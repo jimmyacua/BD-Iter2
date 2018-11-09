@@ -108,7 +108,7 @@
             this.TB_NOMB.CustomButton.Visible = false;
             this.TB_NOMB.Lines = new string[0];
             this.TB_NOMB.Location = new System.Drawing.Point(194, 79);
-            this.TB_NOMB.MaxLength = 32767;
+            this.TB_NOMB.MaxLength = 30;
             this.TB_NOMB.Name = "TB_NOMB";
             this.TB_NOMB.PasswordChar = '\0';
             this.TB_NOMB.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -138,7 +138,7 @@
             this.TB_AÑO.CustomButton.Visible = false;
             this.TB_AÑO.Lines = new string[0];
             this.TB_AÑO.Location = new System.Drawing.Point(194, 169);
-            this.TB_AÑO.MaxLength = 32767;
+            this.TB_AÑO.MaxLength = 4;
             this.TB_AÑO.Name = "TB_AÑO";
             this.TB_AÑO.PasswordChar = '\0';
             this.TB_AÑO.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -151,6 +151,7 @@
             this.TB_AÑO.UseSelectable = true;
             this.TB_AÑO.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.TB_AÑO.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TB_AÑO.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.TB_AÑO_KeyPress);
             // 
             // metroLabel3
             // 
@@ -226,7 +227,7 @@
             this.agregarInterpreteBox.CustomButton.Visible = false;
             this.agregarInterpreteBox.Lines = new string[0];
             this.agregarInterpreteBox.Location = new System.Drawing.Point(337, 131);
-            this.agregarInterpreteBox.MaxLength = 32767;
+            this.agregarInterpreteBox.MaxLength = 30;
             this.agregarInterpreteBox.Name = "agregarInterpreteBox";
             this.agregarInterpreteBox.PasswordChar = '\0';
             this.agregarInterpreteBox.ScrollBars = System.Windows.Forms.ScrollBars.None;

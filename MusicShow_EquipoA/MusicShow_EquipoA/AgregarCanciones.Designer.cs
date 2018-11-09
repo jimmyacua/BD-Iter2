@@ -96,7 +96,7 @@
             this.nombreCancionBox.CustomButton.Visible = false;
             this.nombreCancionBox.Lines = new string[0];
             this.nombreCancionBox.Location = new System.Drawing.Point(189, 127);
-            this.nombreCancionBox.MaxLength = 32767;
+            this.nombreCancionBox.MaxLength = 30;
             this.nombreCancionBox.Name = "nombreCancionBox";
             this.nombreCancionBox.PasswordChar = '\0';
             this.nombreCancionBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -127,7 +127,7 @@
             this.añoCancionBox.CustomButton.Visible = false;
             this.añoCancionBox.Lines = new string[0];
             this.añoCancionBox.Location = new System.Drawing.Point(189, 161);
-            this.añoCancionBox.MaxLength = 32767;
+            this.añoCancionBox.MaxLength = 4;
             this.añoCancionBox.Name = "añoCancionBox";
             this.añoCancionBox.PasswordChar = '\0';
             this.añoCancionBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -140,6 +140,7 @@
             this.añoCancionBox.UseSelectable = true;
             this.añoCancionBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.añoCancionBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.añoCancionBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.añoCancionBox_KeyPress);
             // 
             // agregarInterpreteBox
             // 
@@ -157,7 +158,7 @@
             this.agregarInterpreteBox.CustomButton.Visible = false;
             this.agregarInterpreteBox.Lines = new string[0];
             this.agregarInterpreteBox.Location = new System.Drawing.Point(323, 233);
-            this.agregarInterpreteBox.MaxLength = 32767;
+            this.agregarInterpreteBox.MaxLength = 30;
             this.agregarInterpreteBox.Name = "agregarInterpreteBox";
             this.agregarInterpreteBox.PasswordChar = '\0';
             this.agregarInterpreteBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
@@ -174,6 +175,7 @@
             // 
             // gridCanciones
             // 
+            this.gridCanciones.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridCanciones.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.gridCanciones.Location = new System.Drawing.Point(24, 19);
             this.gridCanciones.Name = "gridCanciones";

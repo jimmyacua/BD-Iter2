@@ -59,6 +59,7 @@
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(23, 175);
             this.dataGridView1.Name = "dataGridView1";
@@ -91,7 +92,7 @@
             this.filtroGeneral.CustomButton.Visible = false;
             this.filtroGeneral.Lines = new string[0];
             this.filtroGeneral.Location = new System.Drawing.Point(486, 124);
-            this.filtroGeneral.MaxLength = 32767;
+            this.filtroGeneral.MaxLength = 30;
             this.filtroGeneral.Name = "filtroGeneral";
             this.filtroGeneral.PasswordChar = '\0';
             this.filtroGeneral.ScrollBars = System.Windows.Forms.ScrollBars.None;

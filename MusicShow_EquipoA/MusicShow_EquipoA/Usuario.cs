@@ -106,7 +106,7 @@ namespace MusicShow_EquipoA
         }
 
 
-        public DataTable obtenerConcierto(string filtroNombre, string filtroGeneral)
+        public DataTable obtenerConcierto(string filtroNombre, string filtroGeneral, string nomAn)
         {
             DataTable tabla = null;
             try
@@ -114,19 +114,19 @@ namespace MusicShow_EquipoA
                 //Si los filtros son nulos se cargan todos los estudiantes de la base de datos
                 if (filtroGeneral == null && filtroNombre == null)
                 {
-                    tabla = bd.FiltrarPorNombre("", "");
+                    tabla = bd.FiltrarPorNombre("", "", nomAn);
                 }
                 else if (filtroGeneral == null && filtroNombre != null)
                 {
-                    tabla = bd.FiltrarPorNombre(filtroNombre, "");
+                    tabla = bd.FiltrarPorNombre(filtroNombre, "", nomAn);
                 }
                 else if (filtroNombre == null && filtroGeneral != null)
                 {
-                    tabla = bd.FiltrarPorNombre("", filtroGeneral);
+                    tabla = bd.FiltrarPorNombre("", filtroGeneral, nomAn);
                 }
                 else if (filtroGeneral != null && filtroNombre != null)
                 {
-                    tabla = bd.FiltrarPorNombre(filtroNombre, filtroGeneral);
+                    tabla = bd.FiltrarPorNombre(filtroNombre, filtroGeneral, nomAn);
                 }
             }
             catch (SqlException ex)

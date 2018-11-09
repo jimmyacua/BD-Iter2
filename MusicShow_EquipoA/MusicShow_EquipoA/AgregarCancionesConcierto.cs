@@ -38,10 +38,15 @@ namespace MusicShow_EquipoA
         string precioEntrada;
         string boleteria;
 
+        public MenuAnunciante menuFinal;
+
         public AgregarCancionesConcierto(agregarFecha a)
         {
             af = a;
+
+            menuFinal = af.menuNuevo;
             nombreAnunciante = af.nombreAnunciante;
+
 
             InitializeComponent();
 
@@ -155,15 +160,32 @@ namespace MusicShow_EquipoA
         {
             int index = comboBoxReper.SelectedIndex -1;//aqui
             string cancion = comboBoxReper.Text;
-            vectorCanciones[contador] = cancion;
 
-            DataGridViewRow row = (DataGridViewRow)gridAgregarC.Rows[0].Clone();
-            gridAgregarC.Rows.Add(row);
 
-           gridAgregarC.Rows[contador].Cells[0].Value = vectorCanciones[contador];
-           gridAgregarC.Rows[contador].Cells[1].Value = vectorInterpretes[index];
+            int contadorT = 0;
+            bool esta = false;
 
-            contador++;
+            while (!esta && contadorT < 50)
+            {
+                if (vectorCanciones[contadorT] == cancion)
+                {
+                    esta = true;
+                }
+                contadorT++;
+            }
+
+            if (!esta)
+            {
+                vectorCanciones[contador] = cancion;
+
+                DataGridViewRow row2 = (DataGridViewRow)gridAgregarC.Rows[0].Clone();
+                gridAgregarC.Rows.Add(row2);
+
+                gridAgregarC.Rows[contador].Cells[0].Value = vectorCanciones[contador];
+                gridAgregarC.Rows[contador].Cells[1].Value = vectorInterpretes[index];
+
+                contador++;
+            }
         }
 
         private void textBoxTipo_Click(object sender, EventArgs e)
@@ -179,22 +201,36 @@ namespace MusicShow_EquipoA
 
 
 
-            DataGridViewRow row = (DataGridViewRow)gridEntradas.Rows[0].Clone();
-            gridEntradas.Rows.Add(row);
+            int contadorT = 0;
+            bool esta = false;
 
-            gridEntradas.Rows[contadorEntradas].Cells[0].Value = tipoEntrada;
-            gridEntradas.Rows[contadorEntradas].Cells[1].Value = precioEntrada;
-            gridEntradas.Rows[contadorEntradas].Cells[2].Value = boleteria;
+            while (!esta && contadorT < 50)
+            {
+                
+               
+                contadorT++;
+            }
 
-            vectorEntradasCategorias[contadorEntradas] = tipoEntrada;
-            vectorEntradasPrecio[contadorEntradas] = precioEntrada;
-            vectorBoleteria[contadorEntradas] = boleteria;            // Revisar
+            if (!esta)
+            {
+                DataGridViewRow row = (DataGridViewRow)gridEntradas.Rows[0].Clone();
+                gridEntradas.Rows.Add(row);
 
-            contadorEntradas++;
+                gridEntradas.Rows[contadorEntradas].Cells[0].Value = tipoEntrada;
+                gridEntradas.Rows[contadorEntradas].Cells[1].Value = precioEntrada;
+                gridEntradas.Rows[contadorEntradas].Cells[2].Value = boleteria;
 
-            textBoxTipo.Text = "";
-            textBoxPrecio.Text = "";
-            comboBoxBoleteria.SelectedIndex = 0;
+                vectorEntradasCategorias[contadorEntradas] = tipoEntrada;
+                vectorEntradasPrecio[contadorEntradas] = precioEntrada;
+                vectorBoleteria[contadorEntradas] = boleteria;            // Revisar
+
+                contadorEntradas++;
+
+                textBoxTipo.Text = "";
+                textBoxPrecio.Text = "";
+                comboBoxBoleteria.SelectedIndex = 0;
+            }
+            
         }
 
         private void botonEntrada_Click(object sender, EventArgs e)
@@ -202,11 +238,6 @@ namespace MusicShow_EquipoA
             AgregarBoleteria ab = new AgregarBoleteria(this);
             ab.Show();
             this.Hide();
-
-
-
-
-
 
         }
 
@@ -245,27 +276,29 @@ namespace MusicShow_EquipoA
 
             }
 
-            /*
+            
             int indiceCanciones = 0;
 
-            while (vectorCanciones[indiceEntradas] != null)
+            while (vectorCanciones[indiceCanciones] != null)
             {
 
+                bd.ActualizarDatos("insert into Se_Tocan values('"+ nombre +"', '"+ nombreAnunciante +"', '"+ vectorCanciones[indiceCanciones] +"', '"+vectorInterpretes[indiceCanciones]+"')");
 
-                bd.ActualizarDatos("insert into Entrada(Categoria, Precio, NombreConcierto, NombreAn) values('" + vectorEntradasCategorias[indiceEntradas] + "', " + vectorEntradasPrecio[indiceEntradas] + ", '" + nombre + "', '" + nombreAnunciante + "');");
+                indiceCanciones++;
 
-                indiceEntradas++;
 
             }
-            */
 
+            menuFinal.Show();
+            this.Hide();
+        }
 
-
-
-
-
-
-
+        private void textBoxPrecio_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
         }
     }
 }

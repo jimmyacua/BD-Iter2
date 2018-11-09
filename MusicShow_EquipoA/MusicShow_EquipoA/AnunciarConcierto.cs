@@ -23,7 +23,7 @@ namespace MusicShow_EquipoA
         string lugar;
         public string nombreAnunciante;
 
-        MenuAnunciante menu;
+        public MenuAnunciante menu;
         public AnunciarConcierto(MenuAnunciante m)
         {
             menu = m;
@@ -98,7 +98,10 @@ namespace MusicShow_EquipoA
         private void button1_Click(object sender, EventArgs e)
         {
             nombre = textBoxNombreConcierto.Text;
-            cupo = Int32.Parse(textBoxCupo.Text);
+            if (textBoxCupo.Text != "")
+            {
+                cupo = Int32.Parse(textBoxCupo.Text);
+            }
             descripcion = textBoxDescripcion.Text;
             lugar = ComboLugar.Text;
 
@@ -123,6 +126,18 @@ namespace MusicShow_EquipoA
 
         }
 
+        public void recargar()
+        {
+            ComboLugar.Items.Clear();
+            LlenarCombobox(ComboLugar, "select NombreLugar from  Lugar");
+        }
 
+        private void textBoxCupo_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
+            {
+                e.Handled = true;
+            }
+        }
     }
 }

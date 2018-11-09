@@ -31,7 +31,7 @@ namespace MusicShow_EquipoA
         private void FechasModConc_Load(object sender, EventArgs e)
         {
             //LlenarTabla(gridFechas,"select f.Fecha_Hora from Concierto c join Fecha_Hora f on c.NombreConcierto = f.NombreConcierto where c.NombreAn = '"+menu.nombreAn+"' and c.NombreConcierto = '"+ modConc.nombreConcierto+"'");
-            LlenarTabla(gridFechas, "select f.Fecha_Hora, f.NombreConcierto, f.NombreAn from Fecha_Hora f where f.NombreAn = '"+modConc.nombreAn+"' and f.NombreConcierto = '"+ modConc.nombreConcierto+ "'; ");
+            LlenarTabla(gridFechas, "select f.Fecha_Hora as Fecha_y_Hora, f.NombreConcierto as Nombre_Concierto, f.NombreAn as Nombre_Anunciante from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn+"' and f.NombreConcierto = '"+ modConc.nombreConcierto+ "'; ");
             LlenarCombobox(CB_Elim, "select f.Fecha_Hora, f.NombreConcierto from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
         }
 
@@ -83,11 +83,11 @@ namespace MusicShow_EquipoA
             if (CB_Elim.Text != "Seleccione")
             {
                 string[] fH = CB_Elim.Text.Split(' ');
-                string fechYHor = fH[1] + " " + fH[2] + " " + fH[3] + fH[4];
+                string fechYHor = fH[1] + " " + fH[2] + " " + fH[3];// + fH[4];
                 string[] fecha = fH[1].Split('/');
                 string f = fecha[2] + "-" + fecha[1] + "-" + fecha[0];
                 string[] hora = fH[2].Split(':');
-                if (fH[3] == "p.") {
+                if (fH[3] == "p.m") {
                     int hr = int.Parse(hora[0]);
                     hr = (hr + 12) % 24;
                     hora[0] = "" + hr;
@@ -96,9 +96,9 @@ namespace MusicShow_EquipoA
                 DateTime dateTime = DateTime.Parse(f);
                 //MessageBox.Show("f y h: " + f, "Modificar f y h", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 bd.ActualizarDatos("delete from Fecha_Hora where NombreAn = '"+modConc.nombreAn+"' and NombreConcierto = '"+ modConc.nombreConcierto+ "' and Fecha_Hora = '"+ f + "';");
-                LlenarTabla(gridFechas, "select f.Fecha_Hora, f.NombreConcierto, f.NombreAn from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
+                LlenarTabla(gridFechas, "select f.Fecha_Hora as Fecha_y_Hora, f.NombreConcierto as Nombre_Concierto, f.NombreAn as Nombre_Anunciante from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
                 CB_Elim.Items.Clear();
-                LlenarCombobox(CB_Elim, "select f.Fecha_Hora, f.NombreConcierto from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
+                LlenarCombobox(CB_Elim, "select f.Fecha_Hora , f.NombreConcierto from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
             }
         }
 
@@ -112,7 +112,7 @@ namespace MusicShow_EquipoA
         {
             string fH = dateTimePicker1.Value.ToString("yyyy-MM-dd HH:mm");
             bd.ActualizarDatos("insert into Fecha_Hora(NombreConcierto, NombreAn, Fecha_Hora) values('" + modConc.nombreConcierto + "','" + modConc.nombreAn + "','" + fH + "');");
-            LlenarTabla(gridFechas, "select f.Fecha_Hora, f.NombreConcierto, f.NombreAn from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
+            LlenarTabla(gridFechas, "select f.Fecha_Hora as Fecha_y_Hora, f.NombreConcierto as Nombre_Concierto, f.NombreAn as Nombre_Anunciante from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
             CB_Elim.Items.Clear();
             LlenarCombobox(CB_Elim, "select f.Fecha_Hora, f.NombreConcierto from Fecha_Hora f where f.NombreAn = '" + modConc.nombreAn + "' and f.NombreConcierto = '" + modConc.nombreConcierto + "'; ");
         }
